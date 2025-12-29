@@ -21,7 +21,6 @@ jobs:
  
       - name: Install dependencies
         run: pnpm install
-        working-directory: matslumparen
  
       - name: Build
         run: pnpm run build
