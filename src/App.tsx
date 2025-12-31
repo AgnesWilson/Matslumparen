@@ -1,21 +1,10 @@
-import {Typography } from "@mui/material"
+import { RouterProvider } from 'react-router';
+import { router } from './Router';
 
 export const App = () => {
-
-  return(
-
-  <Typography
-    variant="h1"
-  sx={{
-    paddingTop: 2,
-      fontSize: 'clamp(2rem, 13.5vw, 15rem)',
-    textAlign: 'center',
-    color: 'tertiary.main'
-  }}
-  >
-    Matslumparen
-  </Typography>
-
-  )
-}
-
+  return (
+    <>
+      <RouterProvider router={router}></RouterProvider>
+    </>
+  );
+};
