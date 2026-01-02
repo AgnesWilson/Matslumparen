@@ -40,10 +40,10 @@ export const NavTabs = () => {
             },
           }}
         >
-          <Tab label="SLUMPAREN" component={Link} to="/slumparen" />
-          <Tab label="DINA RECEPT" component={Link} to="/dina-recept" />
-          <Tab label="NYTT RECEPT" component={Link} to="/nytt-recept" />
-          <Tab label="DITT KONTO" component={Link} to="/konto" />
+          <Tab label="Slumparen" component={Link} to="/slumparen" />
+          <Tab label="Dina recept" component={Link} to="/dina-recept" />
+          <Tab label="Nytt recept" component={Link} to="/nytt-recept" />
+          <Tab label="Ditt konto" component={Link} to="/konto" />
         </Tabs>
       </Box>
 
