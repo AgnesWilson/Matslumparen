@@ -1,17 +1,19 @@
 import { createBrowserRouter } from 'react-router';
-import { Layout } from './Pages/Layout';
+import { RootLayout } from './Pages/RootLayout/Layout';
 import { PageNotFound } from './Pages/PageNotFound';
-import { Home } from './Pages/AppPages/Home';
-import { LogIn } from './Pages/AppPages/LogIn';
-import { Randomizer } from './Pages/AppPages/Randomizer';
-import { Recipes } from './Pages/AppPages/Recipes';
-import { CreateRecipe } from './Pages/AppPages/CreateRecipe';
+import { Home } from './Pages/RootLayout/Home';
+import { LogIn } from './Pages/RootLayout/LogIn';
+import { Randomizer } from './Pages/ProtectedLayout/Randomizer';
+import { Recipes } from './Pages/ProtectedLayout/Recipes';
+import { CreateRecipe } from './Pages/ProtectedLayout/CreateRecipe';
+import { ProtectedLayout } from './Pages/ProtectedLayout/ProtectedLayout';
+import { YourAccount } from './Pages/ProtectedLayout/YourAccount';
 
 export const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <Layout />,
+      element: <RootLayout />,
       errorElement: <PageNotFound />,
       children: [
         {
@@ -23,16 +25,25 @@ export const router = createBrowserRouter(
           element: <LogIn />,
         },
         {
-          path: 'slumparen',
-          element: <Randomizer />,
-        },
-        {
-          path: 'dina-recept',
-          element: <Recipes />,
-        },
-        {
-          path: 'nytt-recept',
-          element: <CreateRecipe />,
+          element: <ProtectedLayout />,
+          children: [
+            {
+              path: 'slumparen',
+              element: <Randomizer />,
+            },
+            {
+              path: 'dina-recept',
+              element: <Recipes />,
+            },
+            {
+              path: 'nytt-recept',
+              element: <CreateRecipe />,
+            },
+            {
+              path: 'konto',
+              element: <YourAccount />,
+            },
+          ],
         },
       ],
     },

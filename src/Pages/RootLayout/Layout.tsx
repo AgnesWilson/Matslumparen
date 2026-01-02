@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router';
-import { HeaderLogo } from '../Fixtures/HeaderLogo';
+import { HeaderLogo } from '../../Fixtures/HeaderLogo';
 
-export const Layout = () => {
+export const RootLayout = () => {
   return (
     <>
       <header>

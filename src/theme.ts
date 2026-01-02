@@ -15,7 +15,7 @@ declare module '@mui/material/styles' {
 
 let theme = createTheme({
   palette: {
-    primary: { main: '#0f0c08ff' },
+    primary: { main: '#FF8000' },
     secondary: { main: '#2200FF' },
     tertiary: { main: '#F8D7AA' },
     accent: { main: '#F36D6D' },
