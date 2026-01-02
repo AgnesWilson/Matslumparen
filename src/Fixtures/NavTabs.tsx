@@ -13,7 +13,7 @@ export const NavTabs = () => {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box component="nav" aria-label="Huvudmeny" sx={{ width: '100%' }}>
       <Box
         sx={{
           bgcolor: 'primary',
@@ -22,6 +22,8 @@ export const NavTabs = () => {
         <Tabs
           value={currentTab()}
           centered
+          aria-label="Navigation tabs"
+          selectionFollowsFocus
           sx={{
             '& .MuiTabs-flexContainer': {
               borderBottom: '2px solid black',
