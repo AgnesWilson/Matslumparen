@@ -11,8 +11,6 @@ export const RootLayout = () => {
       <main>
         <Outlet />
       </main>
-
-      <footer></footer>
     </>
   );
 };
