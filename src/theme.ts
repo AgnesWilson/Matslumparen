@@ -21,6 +21,10 @@ let theme = createTheme({
     accent: { main: '#F36D6D' },
     muted: { main: '#90A9B7' },
 
+    error: { main: '#FF0000' },
+    success: { main: '#00FF00' },
+    warning: { main: '#FFFF00' },
+
     background: {
       default: '#FF8000',
     },
