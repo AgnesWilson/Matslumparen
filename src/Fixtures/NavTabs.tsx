@@ -25,12 +25,11 @@ const TabsStyles = {
   },
   '& .MuiTab-root': {
     color: 'black',
-    border: '2px solid black',
-    borderBottom: 'none',
     marginInline: '5%',
     paddingInline: '2%',
   },
   '& .Mui-selected': {
+    border: '2px solid black',
     borderBottom: 'none',
     fontWeight: 'bold',
     color: 'black !important',
