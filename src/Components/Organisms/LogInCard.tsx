@@ -8,12 +8,14 @@ import {
   TextField,
 } from '@mui/material';
 import { useNavigate } from 'react-router';
-import CloseIcon from '@mui/icons-material/Close';
-import { ReusableButton } from '../Atoms/ReusableButton';
 import { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
 
-import wobblesImage from '../../assets/Wobbles.png';
+import wobblesImage from '../../assets/wobbles.png';
 import { FormError } from '../Atoms/FormError';
+import { ReusableButton } from '../Atoms/ReusableButton';
+
+// TODO: Add icons to error messages !!
 
 interface Props {
   open: boolean;

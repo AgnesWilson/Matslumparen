@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -13,7 +13,7 @@ declare module '@mui/material/styles' {
   }
 }
 
-let theme = createTheme({
+const theme = createTheme({
   palette: {
     primary: { main: '#FF8000' },
     secondary: { main: '#2200FF' },
@@ -35,10 +35,25 @@ let theme = createTheme({
       fontFamily: '"Luckiest Guy", sans-serif ',
       textTransform: 'uppercase',
       fontSize: 'clamp(2rem, 13.5vw, 15rem)',
+      lineHeight: 1,
+    },
+    h2: {
+      fontFamily: '"Krona One", sans-serif',
+      fontSize: 'clamp(1.4rem, 4vw, 3rem)',
+      lineHeight: 1.5,
     },
   },
 });
-
-theme = responsiveFontSizes(theme);
+theme.typography.h2 = {
+  ...theme.typography.h2,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1.8rem',
+    lineHeight: 1.6,
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: 'clamp(1.6rem, 3.5vw, 3rem)',
+    lineHeight: 1.5,
+  },
+};
 
 export { theme };

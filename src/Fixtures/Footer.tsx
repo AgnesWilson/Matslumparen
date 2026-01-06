@@ -14,6 +14,7 @@ export const Footer = ({ onLoginClick }: Props) => {
           top: 'auto',
           bottom: 0,
           backgroundColor: 'accent.main',
+          height: 60,
         }}
       >
         <Toolbar sx={{ display: 'flex', justifyContent: 'flex-start' }}>
