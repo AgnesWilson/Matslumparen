@@ -13,7 +13,7 @@ declare module '@mui/material/styles' {
   }
 }
 
-const theme = createTheme({
+const baseTheme = createTheme({
   palette: {
     primary: { main: '#FF8000' },
     secondary: { main: '#2200FF' },
@@ -29,31 +29,46 @@ const theme = createTheme({
       default: '#FF8000',
     },
   },
+
   typography: {
     fontFamily: '"Krona One", sans-serif',
     h1: {
-      fontFamily: '"Luckiest Guy", sans-serif ',
+      fontFamily: '"Luckiest Guy", sans-serif',
       textTransform: 'uppercase',
-      fontSize: 'clamp(2rem, 13.5vw, 15rem)',
+      fontSize: 'clamp(2.5rem, 11vw, 15rem)',
       lineHeight: 1,
-    },
-    h2: {
-      fontFamily: '"Krona One", sans-serif',
-      fontSize: 'clamp(1.4rem, 4vw, 3rem)',
-      lineHeight: 1.5,
     },
   },
 });
-theme.typography.h2 = {
-  ...theme.typography.h2,
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '1.8rem',
-    lineHeight: 1.6,
+
+const theme = createTheme(baseTheme, {
+  typography: {
+    h2: {
+      fontFamily: '"Krona One", sans-serif',
+      display: 'inline',
+      color: 'white',
+      backgroundColor: baseTheme.palette.secondary.main,
+      wordBreak: 'break-word',
+      lineHeight: 1.5,
+      fontSize: '1.8rem',
+      [baseTheme.breakpoints.up('xs')]: { fontSize: '1.5rem' },
+      [baseTheme.breakpoints.up('sm')]: { fontSize: '1.9rem' },
+      [baseTheme.breakpoints.up('md')]: { fontSize: '2.2rem' },
+      [baseTheme.breakpoints.up('lg')]: { fontSize: '3rem' },
+    },
+    h4: {
+      fontSize: '1rem',
+      [baseTheme.breakpoints.up('xs')]: { fontSize: '1.rem' },
+      [baseTheme.breakpoints.up('sm')]: { fontSize: '1.4rem' },
+      [baseTheme.breakpoints.up('md')]: { fontSize: '1.5rem' },
+      [baseTheme.breakpoints.up('lg')]: { fontSize: '1.8rem' },
+    },
+
+    body2: {
+      fontSize: '1rem',
+      [baseTheme.breakpoints.up('xs')]: { fontSize: '0.9rem' },
+    },
   },
-  [theme.breakpoints.up('md')]: {
-    fontSize: 'clamp(1.6rem, 3.5vw, 3rem)',
-    lineHeight: 1.5,
-  },
-};
+});
 
 export { theme };

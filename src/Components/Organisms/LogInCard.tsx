@@ -94,7 +94,7 @@ export const LogInCard = ({ open, onClose }: Props) => {
             width: '50vw',
             height: 'auto',
             backgroundImage: `url(${wobblesImage})`,
-            backgroundSize: '100% 100%',
+            backgroundSize: '100%',
             backgroundRepeat: 'no-repeat',
             padding: '20px',
             backgroundColor: 'transparent',

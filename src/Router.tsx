@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router';
 import { RootLayout } from './Pages/RootLayout/Layout';
 import { PageNotFound } from './Pages/PageNotFound';
-import { Home } from './Pages/RootLayout/Home';
+import { Home } from './Pages/RootLayout/Home/Home';
 import { Randomizer } from './Pages/ProtectedLayout/Randomizer';
 import { Recipes } from './Pages/ProtectedLayout/Recipes';
 import { CreateRecipe } from './Pages/ProtectedLayout/CreateRecipe';
