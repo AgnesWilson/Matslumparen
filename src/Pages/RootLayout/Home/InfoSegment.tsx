@@ -1,7 +1,7 @@
 import { Box, Card, Typography } from '@mui/material';
 import { h2BoxStyles } from '../../../Styles/sharedStyles';
 import { FoodCard } from './FoodCard';
-import wobbles from '../../../assets/Wobbles.png';
+import wobbles from '../../../assets/wobbles.png';
 import { ReusableButton } from '../../../Components/Atoms/ReusableButton';
 import { useNavigate } from 'react-router';
 
