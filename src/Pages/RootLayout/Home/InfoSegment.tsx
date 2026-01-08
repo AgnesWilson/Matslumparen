@@ -1,8 +1,7 @@
 import { Box, Card, Typography } from '@mui/material';
 import { h2BoxStyles } from '../../../Styles/sharedStyles';
-import { HeaderLogo } from '../../../Fixtures/HeaderLogo';
 import { FoodCard } from './FoodCard';
-import wobblesImage from '../../../assets/wobbles.png';
+import wobbles from '../../../assets/Wobbles.png';
 import { ReusableButton } from '../../../Components/Atoms/ReusableButton';
 import { useNavigate } from 'react-router';
 
@@ -18,8 +17,6 @@ export const InfoSegment = () => {
         flexDirection: 'column',
       }}
     >
-      <HeaderLogo />
-
       <Box
         sx={{
           display: 'flex',
@@ -59,7 +56,7 @@ export const InfoSegment = () => {
               marginTop: '10%',
               minHeight: '350px',
               maxWidth: '800px',
-              backgroundImage: `url(${wobblesImage})`,
+              backgroundImage: `url(${wobbles})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
