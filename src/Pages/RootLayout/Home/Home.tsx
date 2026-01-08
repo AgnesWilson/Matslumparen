@@ -11,6 +11,8 @@ export const Home = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const infoRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,7 +23,8 @@ export const Home = () => {
           setActiveSection('hero');
         }
       },
-      { threshold: 0.5 }
+
+      { root: containerRef.current, threshold: 0.5 }
     );
 
     if (infoRef.current) {
@@ -35,17 +38,34 @@ export const Home = () => {
     if (activeSection === 'hero') {
       infoRef.current?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
-    <>
-      <Box id="hero" sx={{ scrollSnapAlign: 'start' }}>
+    <Box
+      ref={containerRef}
+      sx={{
+        height: '100vh',
+        overflowY: 'scroll',
+        scrollSnapType: 'y mandatory',
+        scrollBehavior: 'smooth',
+        position: 'relative',
+      }}
+    >
+      <Box
+        id="hero"
+        ref={heroRef}
+        sx={{ height: '100vh', scrollSnapAlign: 'start' }}
+      >
         <Hero />
       </Box>
 
-      <Box id="info" ref={infoRef} sx={{ scrollSnapAlign: 'start' }}>
+      <Box
+        id="info"
+        ref={infoRef}
+        sx={{ minHeight: '100vh', scrollSnapAlign: 'start' }}
+      >
         <InfoSegment />
       </Box>
 
@@ -56,6 +76,6 @@ export const Home = () => {
 
       <Footer onLoginClick={() => setIsLoginOpen(true)} />
       <LogInCard open={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-    </>
+    </Box>
   );
 };
