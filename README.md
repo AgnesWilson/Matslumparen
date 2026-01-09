@@ -8,3 +8,7 @@ pnpm typecheck
 Inloggning =
 Användare = Johannes
 Lösen = Jojo
+
+TODO:
+
+- LinkBtn (Hur funkar det på Homepage)byter inte text på mobilversion. Endast desktop
