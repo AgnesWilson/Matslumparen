@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link, Outlet, useLocation } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 const TabsStyles = {
   '& .MuiTabs-flexContainer': {
@@ -151,10 +151,6 @@ export const NavTabs = () => {
           </Tabs>
         </Box>
       )}
-
-      <Box>
-        <Outlet />
-      </Box>
     </Box>
   );
 };

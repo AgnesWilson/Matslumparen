@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, Typography } from '@mui/material';
-import halloumiPot from '../../../assets/halloumiPot.png';
+import halloumiPot from '../../../../public/foodImages/halloumiPot.png';
 
 export const FoodCard = () => {
   return (
