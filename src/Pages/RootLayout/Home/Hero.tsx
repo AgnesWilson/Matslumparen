@@ -31,9 +31,7 @@ export const Hero = () => {
       />
 
       <Box sx={h2BoxStyles}>
-        <Typography variant="h2">
-          Svaret på den eviga frågan: "Vad ska vi äta för mat idag"
-        </Typography>
+        <Typography variant="h2">Svaret på den eviga frågan: "Vad ska vi äta för mat idag"</Typography>
       </Box>
 
       <Box

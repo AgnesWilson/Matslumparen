@@ -35,8 +35,7 @@ export const LinkButton = ({ activeSection, onToggleScroll }: Props) => {
         aria-label="pil"
         sx={{
           color: 'secondary.main',
-          transform:
-            activeSection === 'hero' ? 'rotate(270deg)' : 'rotate(90deg)',
+          transform: activeSection === 'hero' ? 'rotate(270deg)' : 'rotate(90deg)',
           fontSize: {
             xs: '2.2rem',
             sm: '2.5rem',

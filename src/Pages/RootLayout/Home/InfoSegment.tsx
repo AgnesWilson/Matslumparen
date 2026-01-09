@@ -78,8 +78,7 @@ export const InfoSegment = () => {
                 Börja bygga din samling!
               </Typography>
               <Typography variant="body2" sx={{ paddingBottom: '8%' }}>
-                Skapa ett konto och lägg till ditt första recept. Helt gratis
-                att komma igång.
+                Skapa ett konto och lägg till ditt första recept. Helt gratis att komma igång.
               </Typography>
               <ReusableButton
                 btnText="Skapa konto"

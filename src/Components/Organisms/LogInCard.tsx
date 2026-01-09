@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  TextField,
-} from '@mui/material';
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
@@ -170,11 +162,7 @@ export const LogInCard = ({ open, onClose }: Props) => {
                 variant="secondary"
                 type="button"
               />
-              <ReusableButton
-                btnText="Logga in"
-                type="submit"
-                variant="primary"
-              />
+              <ReusableButton btnText="Logga in" type="submit" variant="primary" />
             </DialogActions>
           </Box>
         </DialogContent>
