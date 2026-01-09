@@ -58,10 +58,13 @@ const theme = createTheme(baseTheme, {
     },
     h4: {
       fontSize: '1rem',
-      [baseTheme.breakpoints.up('xs')]: { fontSize: '1.rem' },
+      [baseTheme.breakpoints.up('xs')]: { fontSize: '1rem' },
       [baseTheme.breakpoints.up('sm')]: { fontSize: '1.4rem' },
       [baseTheme.breakpoints.up('md')]: { fontSize: '1.5rem' },
       [baseTheme.breakpoints.up('lg')]: { fontSize: '1.8rem' },
+    },
+    h5: {
+      fontSize: '1rem',
     },
 
     body2: {
