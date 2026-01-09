@@ -71,12 +71,7 @@ export const NavTabs = () => {
             }}
           >
             <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <IconButton
-                edge="end"
-                color="inherit"
-                aria-label="Öppna meny"
-                onClick={() => setOpen(true)}
-              >
+              <IconButton edge="end" color="inherit" aria-label="Öppna meny" onClick={() => setOpen(true)}>
                 <MenuIcon />
                 <Typography sx={{ marginLeft: 1 }}>Meny</Typography>
               </IconButton>
@@ -101,12 +96,7 @@ export const NavTabs = () => {
             }}
           >
             <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <IconButton
-                edge="end"
-                color="inherit"
-                aria-label="Stäng meny"
-                onClick={() => setOpen(false)}
-              >
+              <IconButton edge="end" color="inherit" aria-label="Stäng meny" onClick={() => setOpen(false)}>
                 <CloseIcon />
               </IconButton>
             </Toolbar>
@@ -114,11 +104,7 @@ export const NavTabs = () => {
             <List>
               {navItems.map((item) => (
                 <ListItem key={item.to} disablePadding>
-                  <ListItemButton
-                    component={Link}
-                    to={item.to}
-                    onClick={() => setOpen(false)}
-                  >
+                  <ListItemButton component={Link} to={item.to} onClick={() => setOpen(false)}>
                     <ListItemText
                       primary={item.label}
                       slotProps={{

@@ -63,10 +63,7 @@ export const SmallRecipeCard = ({
       <Box sx={BoxStyles}>
         <RecipeCardSmallBox header="Säsong" text={season}></RecipeCardSmallBox>
         <RecipeCardSmallBox header="Väder" text={weather}></RecipeCardSmallBox>
-        <RecipeCardSmallBox
-          header="Temperatur"
-          text={temperature}
-        ></RecipeCardSmallBox>
+        <RecipeCardSmallBox header="Temperatur" text={temperature}></RecipeCardSmallBox>
       </Box>
       <Box
         sx={{

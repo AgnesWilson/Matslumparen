@@ -8,13 +8,7 @@ interface Props {
   disabled?: boolean;
 }
 
-export const ReusableButton = ({
-  btnText,
-  onClick,
-  variant,
-  type,
-  disabled,
-}: Props) => {
+export const ReusableButton = ({ btnText, onClick, variant, type, disabled }: Props) => {
   const styles =
     variant === 'primary'
       ? {
@@ -27,13 +21,7 @@ export const ReusableButton = ({
         };
 
   return (
-    <Button
-      variant="contained"
-      disabled={disabled}
-      onClick={onClick}
-      type={type}
-      sx={styles}
-    >
+    <Button variant="contained" disabled={disabled} onClick={onClick} type={type} sx={styles}>
       {btnText}
     </Button>
   );

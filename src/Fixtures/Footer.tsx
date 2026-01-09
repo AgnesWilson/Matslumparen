@@ -18,14 +18,8 @@ export const Footer = ({ onLoginClick }: Props) => {
         }}
       >
         <Toolbar sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-          <IconButton
-            color="inherit"
-            aria-label="Logga in"
-            onClick={onLoginClick}
-          >
-            <Typography sx={{ marginRight: 1 }}>
-              Logga in på ditt konto
-            </Typography>
+          <IconButton color="inherit" aria-label="Logga in" onClick={onLoginClick}>
+            <Typography sx={{ marginRight: 1 }}>Logga in på ditt konto</Typography>
             <ArrowForward />
           </IconButton>
         </Toolbar>

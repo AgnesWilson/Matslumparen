@@ -53,26 +53,15 @@ export const Home = () => {
         position: 'relative',
       }}
     >
-      <Box
-        id="hero"
-        ref={heroRef}
-        sx={{ height: '100vh', scrollSnapAlign: 'start' }}
-      >
+      <Box id="hero" ref={heroRef} sx={{ height: '100vh', scrollSnapAlign: 'start' }}>
         <Hero />
       </Box>
 
-      <Box
-        id="info"
-        ref={infoRef}
-        sx={{ minHeight: '100vh', scrollSnapAlign: 'start' }}
-      >
+      <Box id="info" ref={infoRef} sx={{ minHeight: '100vh', scrollSnapAlign: 'start' }}>
         <InfoSegment />
       </Box>
 
-      <LinkButton
-        activeSection={activeSection}
-        onToggleScroll={handleScrollToggle}
-      />
+      <LinkButton activeSection={activeSection} onToggleScroll={handleScrollToggle} />
 
       <Footer onLoginClick={() => setIsLoginOpen(true)} />
       <LogInCard open={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
