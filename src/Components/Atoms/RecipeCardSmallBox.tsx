@@ -7,7 +7,7 @@ interface Props {
 
 export const RecipeCardSmallBox = ({ header, text }: Props) => {
   return (
-    <Box sx={{ border: '1px black solid', padding: '1%', width: '9rem' }}>
+    <Box sx={{ border: '1px black solid', padding: '1%', width: '100%' }}>
       <Typography variant="body2" gutterBottom sx={{ fontWeight: 'bold' }}>
         {header}
       </Typography>
