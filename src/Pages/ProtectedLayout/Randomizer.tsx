@@ -1,9 +1,12 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 export const Randomizer = () => {
+  const navigate = useNavigate();
   const handleClick = () => {
-    console.log('klick!');
+    navigate('/resultat');
   };
+
   return (
     <Box
       sx={{
