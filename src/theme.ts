@@ -51,7 +51,7 @@ const theme = createTheme(baseTheme, {
       wordBreak: 'break-word',
       lineHeight: 1.5,
       fontSize: '1.8rem',
-      [baseTheme.breakpoints.up('xs')]: { fontSize: '1.5rem' },
+      [baseTheme.breakpoints.up('xs')]: { fontSize: '1.8rem' },
       [baseTheme.breakpoints.up('sm')]: { fontSize: '1.9rem' },
       [baseTheme.breakpoints.up('md')]: { fontSize: '2.2rem' },
       [baseTheme.breakpoints.up('lg')]: { fontSize: '3rem' },
