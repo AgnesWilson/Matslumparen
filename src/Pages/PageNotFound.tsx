@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { FeedbackCard } from '../Components/Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
 import { HeaderLogo } from '../Fixtures/HeaderLogo';
@@ -6,24 +6,31 @@ import { HeaderLogo } from '../Fixtures/HeaderLogo';
 export const PageNotFound = () => {
   const navigate = useNavigate();
   return (
-    <>
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <HeaderLogo />
-      <Box
+      <Container
+        maxWidth="sm"
         sx={{
+          flexGrow: 1,
           display: 'flex',
-          justifyContent: 'center',
           alignItems: 'center',
-          minHeight: '100vh',
-          paddingInline: 2,
+          justifyContent: 'center',
+          paddingBottom: '15vh',
         }}
       >
         <FeedbackCard
-          headline="Sidan du försöker hitta finns tyvärr inte."
-          textOne="Sidan du försökt hitta finns tyvärr inte. Gå tillbaka till den föregående sidan eller försök igen"
+          headline="Sidan hittades inte"
+          textOne="Sidan du försöker nå finns tyvärr inte. Gå tillbaka till startsidan och försök igen."
           buttonText="Tillbaka till startsidan"
           onButtonClick={() => navigate('/')}
         />
-      </Box>
-    </>
+      </Container>
+    </Box>
   );
 };
