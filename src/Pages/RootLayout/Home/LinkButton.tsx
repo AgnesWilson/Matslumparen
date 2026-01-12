@@ -25,6 +25,9 @@ export const LinkButton = ({ activeSection, onToggleScroll }: Props) => {
         variant="h4"
         sx={{
           color: 'black',
+          backgroundColor: 'tertiary.main',
+          textDecoration: 'none',
+          border: '0.5rem, solid, #F8D7AA',
         }}
         onClick={onToggleScroll}
       >

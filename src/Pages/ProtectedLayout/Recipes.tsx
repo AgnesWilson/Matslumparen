@@ -31,12 +31,14 @@ export const Recipes = () => {
             options={seasonOptions}
             selectedValue={selectedSeason}
             onSelect={setSelectedSeason}
+            onClose={() => setSelectedSeason('Alla')}
           />
           <FilterGroup
             heading="Filtrera efter väder"
             options={weatherOptions}
             selectedValue={selectedWeather}
             onSelect={setSelectedWeather}
+            onClose={() => setSelectedWeather('Alla')}
           />
         </Stack>
       </Box>
