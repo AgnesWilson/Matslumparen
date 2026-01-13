@@ -1,8 +1,11 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
+import { useWeather } from '../../Context/UseWeather';
 
 export const Randomizer = () => {
   const navigate = useNavigate();
+  const { weather, loading } = useWeather();
+
   const handleClick = () => {
     navigate('/resultat');
   };
@@ -42,9 +45,11 @@ export const Randomizer = () => {
               sx={{
                 padding: { xs: 1, sm: 1.5 },
                 bgcolor: 'tertiary.main',
-              }} // TODO: Ändra från ett hårdkodat värde till {currentWeather}
+              }}
             >
-              Stockholm 12° mulet
+              {loading
+                ? 'Laddar väder...'
+                : `Stockholm: ${weather?.temp}° ${weather?.condition.toLowerCase()}`}
             </Typography>
             <Typography
               variant="h5"

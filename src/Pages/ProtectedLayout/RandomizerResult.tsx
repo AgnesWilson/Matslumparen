@@ -4,6 +4,7 @@ import type { RecipeType } from '../../Types/RecipeType';
 import { FeedbackCard } from '../../Components/Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
 import { ReusableButton } from '../../Components/Atoms/ReusableButton';
+import { useWeather } from '../../Context/UseWeather';
 
 interface Props {
   recipe?: RecipeType;
@@ -11,6 +12,7 @@ interface Props {
 
 export const RandomizerResult = ({ recipe }: Props) => {
   const navigate = useNavigate();
+  const { weather, loading } = useWeather();
 
   return (
     <Container
@@ -61,8 +63,12 @@ export const RandomizerResult = ({ recipe }: Props) => {
               <Typography variant="body2" sx={{ fontWeight: 'bold', marginBottom: '2%' }}>
                 Slumpningen baseras på:
               </Typography>
-              {/*  // TODO: Ändra från ett hårdkodat värde till {currentWeather && Current Season} */}
-              <Typography variant="body2">Vädret i Stockholm just nu: 3° och mulet</Typography>
+              <Typography variant="body2">
+                {loading
+                  ? 'Laddar väder...'
+                  : `Stockholm: ${weather?.temp}° ${weather?.condition.toLowerCase()}`}
+              </Typography>
+              {/*  // TODO: Ändra från ett hårdkodat värde till {CurrentSeason} */}
               <Typography variant="body2">Nuvarande säsong: Vinter, december - februari</Typography>
             </Box>
 
