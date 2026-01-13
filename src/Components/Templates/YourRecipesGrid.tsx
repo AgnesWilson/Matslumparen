@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { SmallRecipeCard } from '../../Components/Organisms/SmallRecipeCard';
+import { RecipeCard } from '../Organisms/RecipeCard';
 import type { RecipeType } from '../../Types/RecipeType';
 import { FeedbackCard } from '../Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
@@ -30,7 +30,7 @@ export const YourRecipesGrid = ({ recipes }: Props) => {
           }}
         >
           {recipes.map((recipe) => (
-            <SmallRecipeCard
+            <RecipeCard
               key={recipe.id}
               recipeName={recipe.name}
               foodImage={recipe.image}
@@ -55,11 +55,12 @@ export const YourRecipesGrid = ({ recipes }: Props) => {
             alignItems: 'center',
             paddingInline: 2,
             paddingTop: '3%',
+            paddingBottom: '5%',
           }}
         >
           <FeedbackCard
             headline="Inga recept att visa"
-            textOne="Antingen har du inga recept i din receptbank ännu eller så finns det inga recept i din bank som matchar dina valda filter. Testa att filtrera på något annat eller att lägga till fler recept!"
+            textOne="Det finns det inga recept i din bank som matchar dina valda filter. Testa att filtrera på något annat eller att lägga till fler recept!"
             buttonText="Skapa nytt recept"
             onButtonClick={() => navigate('/nytt-recept')}
           />

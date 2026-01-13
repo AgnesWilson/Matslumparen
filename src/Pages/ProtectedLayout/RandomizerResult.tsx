@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { SmallRecipeCard } from '../../Components/Organisms/SmallRecipeCard';
+import { RecipeCard } from '../../Components/Organisms/RecipeCard';
 import type { RecipeType } from '../../Types/RecipeType';
 import { FeedbackCard } from '../../Components/Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
@@ -31,7 +31,8 @@ export const RandomizerResult = ({ recipe }: Props) => {
           }}
         >
           <Box sx={{ paddingBottom: { xs: '10%' } }}>
-            <SmallRecipeCard
+            <RecipeCard
+              variant="big"
               recipeName={recipe.name}
               foodImage={recipe.image}
               alt={`Bild på ${recipe.name}`}
@@ -44,6 +45,7 @@ export const RandomizerResult = ({ recipe }: Props) => {
               }
               portions={`${recipe.portions} personer`}
               time={recipe.time}
+              description={recipe.description}
             />
           </Box>
 
