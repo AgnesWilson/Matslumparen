@@ -9,6 +9,9 @@ Inloggning =
 Användare = Johannes
 Lösen = Jojo
 
+Ändra "const USE_DUMMY_DATA = true; " till false för att hämta riktig väderdata (i weatherService)
+
 TODO:
 
+- Lägga till en tooltip för inloggningsuppgifter?
 - LinkBtn (Hur funkar det på Homepage)byter inte text på mobilversion. Endast desktop
