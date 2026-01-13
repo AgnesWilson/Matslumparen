@@ -1,11 +1,17 @@
 import { Box, Card, Typography } from '@mui/material';
 import { h2BoxStyles } from '../../../Styles/sharedStyles';
-import { FoodCard } from './FoodCard';
 import wobbles from '../../../assets/wobbles.png';
 import { ReusableButton } from '../../../Components/Atoms/ReusableButton';
 import { useNavigate } from 'react-router';
+import { RecipeCard } from '../../../Components/Organisms/RecipeCard';
+import type { RecipeType } from '../../../Types/RecipeType';
+import { mockRecipe } from '../../../MockData/SingleRecipe';
 
-export const InfoSegment = () => {
+interface Props {
+  recipe?: RecipeType;
+}
+
+export const InfoSegment = ({ recipe = mockRecipe }: Props) => {
   const navigate = useNavigate();
 
   return (
@@ -94,7 +100,24 @@ export const InfoSegment = () => {
             width: { xs: '100%', md: '40%' },
           }}
         >
-          <FoodCard />
+          {recipe && (
+            <RecipeCard
+              variant="big"
+              recipeName={recipe.name}
+              foodImage={recipe.image}
+              alt={`Bild på ${recipe.name}`}
+              season={recipe.suitableSeasons.join(', ')}
+              weather={recipe.suitableWeather.conditions.join(', ')}
+              temperature={
+                recipe.suitableWeather.temperature.relation === 'above'
+                  ? `${recipe.suitableWeather.temperature.value}° och uppåt`
+                  : `Under ${recipe.suitableWeather.temperature.value}°`
+              }
+              portions={`${recipe.portions} personer`}
+              time={recipe.time}
+              description={recipe.description}
+            ></RecipeCard>
+          )}
         </Box>
       </Box>
     </Box>

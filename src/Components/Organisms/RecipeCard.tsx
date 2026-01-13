@@ -12,6 +12,7 @@ const BoxStyles = {
 };
 
 interface Props {
+  variant?: 'small' | 'big';
   recipeName: string;
   foodImage: string;
   alt: string;
@@ -20,9 +21,11 @@ interface Props {
   temperature: string;
   portions: string;
   time: string;
+  description?: string;
 }
 
-export const SmallRecipeCard = ({
+export const RecipeCard = ({
+  variant = 'small',
   recipeName,
   foodImage,
   alt,
@@ -31,13 +34,16 @@ export const SmallRecipeCard = ({
   temperature,
   portions,
   time,
+  description,
 }: Props) => {
   const navigate = useNavigate();
+
+  const isBig = variant === 'big';
   return (
     <Card
       elevation={5}
       sx={{
-        backgroundColor: 'tertiary.main',
+        backgroundColor: isBig ? 'accent.main' : 'tertiary.main',
         padding: { xs: '20px', md: '40px' },
         width: '100%',
         maxWidth: '400px',
@@ -79,14 +85,20 @@ export const SmallRecipeCard = ({
           {time}
         </Typography>
       </Box>
-      <Box sx={BoxStyles}>
-        <ReusableButton
-          btnText="Till receptet"
-          onClick={() => navigate('/recipe/:id')} //TODO fixa routing här!
-          variant="primary"
-          type="button"
-        ></ReusableButton>
-      </Box>
+      {isBig ? (
+        <Typography variant="body2" fontWeight="bold" gutterBottom sx={{ padding: '5%', lineHeight: '170%' }}>
+          {description}
+        </Typography>
+      ) : (
+        <Box sx={BoxStyles}>
+          <ReusableButton
+            btnText="Till receptet"
+            onClick={() => navigate('/recipe/:id')} //TODO fixa routing här!
+            variant="primary"
+            type="button"
+          ></ReusableButton>
+        </Box>
+      )}
     </Card>
   );
 };
