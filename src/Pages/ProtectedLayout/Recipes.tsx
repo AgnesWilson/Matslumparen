@@ -2,10 +2,11 @@ import { Box, Stack } from '@mui/material';
 import { YourRecipesGrid } from '../../Components/Templates/YourRecipesGrid';
 import { useState } from 'react';
 import { mockRecipes } from '../../MockData/Recipes';
-import type { Seasons, WeatherCondition } from '../../Types/WeatherAndSeasonTypes';
+import type { WeatherCondition } from '../../Types/WeatherAndSeasonTypes';
 import { FilterGroup } from '../../Components/Organisms/FilterGroup';
 import { FeedbackCard } from '../../Components/Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
+import type { Seasons } from '../../Types/SeasonTypes';
 
 const seasonOptions: Seasons[] = ['Vår', 'Sommar', 'Höst', 'Vinter', 'Alla'];
 const weatherOptions: WeatherCondition[] = ['Soligt', 'Vind', 'Regn', 'Snö', 'Molnigt', 'Alla'];
