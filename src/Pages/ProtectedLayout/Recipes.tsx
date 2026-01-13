@@ -4,11 +4,15 @@ import { useState } from 'react';
 import { mockRecipes } from '../../MockData/Recipes';
 import type { Seasons, WeatherCondition } from '../../Types/WeatherAndSeasonTypes';
 import { FilterGroup } from '../../Components/Organisms/FilterGroup';
+import { FeedbackCard } from '../../Components/Organisms/FeedbackCard';
+import { useNavigate } from 'react-router';
 
 const seasonOptions: Seasons[] = ['Vår', 'Sommar', 'Höst', 'Vinter', 'Alla'];
 const weatherOptions: WeatherCondition[] = ['Soligt', 'Vind', 'Regn', 'Snö', 'Molnigt', 'Alla'];
 
 export const Recipes = () => {
+  const navigate = useNavigate();
+
   const [selectedSeason, setSelectedSeason] = useState<Seasons>('Alla');
   const [selectedWeather, setSelectedWeather] = useState<WeatherCondition>('Alla');
 
@@ -19,6 +23,19 @@ export const Recipes = () => {
 
     return seasonMatch && weatherMatch;
   });
+
+  if (mockRecipes.length === 0) {
+    return (
+      <Box sx={{ padding: '5%', display: 'flex', justifyContent: 'center' }}>
+        <FeedbackCard
+          headline="Din receptbank är tom"
+          textOne="Börja med att lägga till ditt första recept för att se det här!"
+          buttonText="Skapa nytt recept"
+          onButtonClick={() => navigate('/nytt-recept')}
+        />
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
