@@ -4,7 +4,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '1',
     name: 'Krämig Halloumigryta med linser',
-    image: 'foodImages/halloumiPot.png',
+    image: '/Matslumparen/foodImages/halloumiPot.png',
     suitableSeasons: ['Vinter', 'Höst', 'Vår'],
     suitableWeather: {
       conditions: ['Alla'],
@@ -18,7 +18,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '2',
     name: 'Fräsch Vattenmelon- & Fetasallad',
-    image: 'foodImages/melonSallad.png',
+    image: '/Matslumparen/foodImages/melonSallad.png',
     suitableSeasons: ['Sommar', 'Vår'],
     suitableWeather: {
       conditions: ['Soligt', 'Vind'],
@@ -32,7 +32,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '3',
     name: 'Sötpotatis-chili med mörk choklad',
-    image: 'foodImages/chilli.png',
+    image: '/Matslumparen/foodImages/chilli.png',
     suitableSeasons: ['Höst', 'Vinter'],
     suitableWeather: {
       conditions: ['Molnigt', 'Regn', 'Snö', 'Vind'],
@@ -46,7 +46,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '4',
     name: 'Zucchini- och Halloumiburgare',
-    image: 'foodImages/zuchiniBurger.png',
+    image: '/Matslumparen/foodImages/zuchiniBurger.png',
     suitableSeasons: ['Sommar', 'Vår'],
     suitableWeather: {
       conditions: ['Soligt', 'Molnigt', 'Vind'],
@@ -60,7 +60,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '5',
     name: 'Linssoppa med citron och spenat',
-    image: 'foodImages/lentilSoup.png',
+    image: '/Matslumparen/foodImages/lentilSoup.png',
     suitableSeasons: ['Vår', 'Höst'],
     suitableWeather: {
       conditions: ['Molnigt', 'Regn', 'Vind'],
@@ -74,7 +74,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '6',
     name: 'Klassisk Shakshuka',
-    image: 'foodImages/shakshuka.png',
+    image: '/Matslumparen/foodImages/shakshuka.png',
     suitableSeasons: ['Alla'],
     suitableWeather: {
       conditions: ['Soligt', 'Molnigt', 'Regn', 'Vind'],
@@ -88,7 +88,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '7',
     name: 'Grillad Majskolv med chilismör',
-    image: 'foodImages/cornCob.png',
+    image: '/Matslumparen/foodImages/cornCob.png',
     suitableSeasons: ['Sommar'],
     suitableWeather: {
       conditions: ['Soligt'],
@@ -102,7 +102,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '8',
     name: 'Sötpotatissoppa med ingefära och linser',
-    image: 'foodImages/sweetPotatoSoup.png',
+    image: '/Matslumparen/foodImages/sweetPotatoSoup.png',
     suitableSeasons: ['Höst', 'Vinter'],
     suitableWeather: {
       conditions: ['Regn', 'Vind', 'Molnigt', 'Snö'],
@@ -116,7 +116,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '9',
     name: 'Asiatisk nudelsallad med edamame',
-    image: 'foodImages/noodleSallad.png',
+    image: '/Matslumparen/foodImages/noodleSallad.png',
     suitableSeasons: ['Vår', 'Sommar'],
     suitableWeather: {
       conditions: ['Soligt', 'Molnigt'],
@@ -130,7 +130,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '10',
     name: 'Krämig Svamprisotto',
-    image: 'foodImages/risotto.png',
+    image: '/Matslumparen/foodImages/risotto.png',
     suitableSeasons: ['Höst', 'Vinter'],
     suitableWeather: {
       conditions: ['Molnigt', 'Regn', 'Vind'],
@@ -144,7 +144,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '11',
     name: 'Falafel-wrap med picklad rödlök',
-    image: 'foodImages/falafel.png',
+    image: '/Matslumparen/foodImages/falafel.png',
     suitableSeasons: ['Vår', 'Sommar', 'Höst'],
     suitableWeather: {
       conditions: ['Soligt', 'Vind', 'Molnigt'],
@@ -158,7 +158,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '12',
     name: 'Fransk Löksoppa med ostgratinerat bröd',
-    image: 'foodImages/onionSoup.png',
+    image: '/Matslumparen/foodImages/onionSoup.png',
     suitableSeasons: ['Vinter'],
     suitableWeather: {
       conditions: ['Snö', 'Regn', 'Vind'],
@@ -172,7 +172,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '13',
     name: 'Gazpacho',
-    image: 'foodImages/gazpacho.png',
+    image: '/Matslumparen/foodImages/gazpacho.png',
     suitableSeasons: ['Sommar'],
     suitableWeather: {
       conditions: ['Soligt'],
@@ -186,7 +186,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '14',
     name: 'Indisk Paneer Butter Masala',
-    image: 'foodImages/paneerButterMasala.png',
+    image: '/Matslumparen/foodImages/paneerButterMasala.png',
     suitableSeasons: ['Vinter', 'Höst'],
     suitableWeather: {
       conditions: ['Alla'],
@@ -200,7 +200,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '15',
     name: 'Sparris- och citronpasta',
-    image: 'foodImages/asparagusPasta.png',
+    image: '/Matslumparen/foodImages/asparagusPasta.png',
     suitableSeasons: ['Vår', 'Sommar'],
     suitableWeather: {
       conditions: ['Soligt', 'Vind'],
@@ -214,7 +214,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '16',
     name: 'Rödbetsburgare med chèvrekräm',
-    image: 'foodImages/beetrootBurger.png',
+    image: '/Matslumparen/foodImages/beetrootBurger.png',
     suitableSeasons: ['Höst', 'Vår'],
     suitableWeather: {
       conditions: ['Molnigt', 'Vind', 'Soligt'],
@@ -228,7 +228,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '17',
     name: 'Belugabolognese',
-    image: 'foodImages/bolognese.png',
+    image: '/Matslumparen/foodImages/bolognese.png',
     suitableSeasons: ['Vinter', 'Höst', 'Vår'],
     suitableWeather: {
       conditions: ['Snö', 'Molnigt', 'Regn', 'Vind'],
@@ -242,7 +242,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '18',
     name: 'Vietnamesiska vårrullar',
-    image: 'foodImages/springRolls.png',
+    image: '/Matslumparen/foodImages/springRolls.png',
     suitableSeasons: ['Sommar', 'Vår'],
     suitableWeather: {
       conditions: ['Soligt'],
@@ -256,7 +256,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '19',
     name: 'Ratatouille med potatis och nybakat bröd',
-    image: 'foodImages/ratatouille.png',
+    image: '/Matslumparen/foodImages/ratatouille.png',
     suitableSeasons: ['Alla'],
     suitableWeather: {
       conditions: ['Molnigt', 'Regn', 'Snö', 'Vind'],
@@ -270,7 +270,7 @@ export const mockRecipes: RecipeType[] = [
   {
     id: '20',
     name: 'Ugnsbakad Blomkål med tahinisås',
-    image: 'foodImages/cauliflower.png',
+    image: '/Matslumparen/foodImages/cauliflower.png',
     suitableSeasons: ['Höst', 'Vår', 'Sommar'],
     suitableWeather: {
       conditions: ['Vind', 'Molnigt'],

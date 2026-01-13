@@ -3,7 +3,7 @@ import type { RecipeType } from '../Types/RecipeType';
 export const mockRecipe: RecipeType = {
   id: '14',
   name: 'Indisk Paneer Butter Masala',
-  image: 'foodImages/paneerButterMasala.png',
+  image: '/Matslumparen/foodImages/paneerButterMasala.png',
   suitableSeasons: ['Vinter', 'Höst'],
   suitableWeather: {
     conditions: ['Alla'],
