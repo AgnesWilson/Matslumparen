@@ -1,10 +1,13 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import { fetchStockholmWeather, type WeatherSummary } from '../Services/weatherService';
 import { WeatherContext } from './UseWeather';
+import { getSeasonDetails } from '../Utils/seasonUtils';
 
 export function WeatherProvider({ children }: { children: ReactNode }) {
   const [weather, setWeather] = useState<WeatherSummary | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const [season] = useState(getSeasonDetails());
 
   useEffect(() => {
     const loadWeather = async () => {
@@ -20,5 +23,5 @@ export function WeatherProvider({ children }: { children: ReactNode }) {
     loadWeather();
   }, []);
 
-  return <WeatherContext.Provider value={{ weather, loading }}>{children}</WeatherContext.Provider>;
+  return <WeatherContext.Provider value={{ weather, loading, season }}>{children}</WeatherContext.Provider>;
 }

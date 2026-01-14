@@ -12,7 +12,7 @@ interface Props {
 
 export const RandomizerResult = ({ recipe }: Props) => {
   const navigate = useNavigate();
-  const { weather, loading } = useWeather();
+  const { weather, loading, season } = useWeather();
 
   return (
     <Container
@@ -68,8 +68,10 @@ export const RandomizerResult = ({ recipe }: Props) => {
                   ? 'Laddar väder...'
                   : `Stockholm: ${weather?.temp}° ${weather?.condition.toLowerCase()}`}
               </Typography>
-              {/*  // TODO: Ändra från ett hårdkodat värde till {CurrentSeason} */}
-              <Typography variant="body2">Nuvarande säsong: Vinter, december - februari</Typography>
+              <Typography variant="body2">
+                Nuvarande säsong:
+                {loading ? 'Laddar säsong...' : ` ${season?.name}, (${season?.months})`}
+              </Typography>
             </Box>
 
             <Stack direction="row" spacing={2} sx={{ paddingTop: '3%' }}>

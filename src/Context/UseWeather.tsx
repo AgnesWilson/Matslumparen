@@ -1,8 +1,10 @@
 import { createContext, useContext } from 'react';
 import { type WeatherSummary } from '../Services/weatherService';
+import type { SeasonSummary } from '../Types/SeasonTypes';
 
 export interface WeatherContextType {
   weather: WeatherSummary | null;
+  season: SeasonSummary | null;
   loading: boolean;
 }
 

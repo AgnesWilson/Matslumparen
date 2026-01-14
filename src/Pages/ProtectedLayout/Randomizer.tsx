@@ -4,7 +4,7 @@ import { useWeather } from '../../Context/UseWeather';
 
 export const Randomizer = () => {
   const navigate = useNavigate();
-  const { weather, loading } = useWeather();
+  const { weather, loading, season } = useWeather();
 
   const handleClick = () => {
     navigate('/resultat');
@@ -56,9 +56,9 @@ export const Randomizer = () => {
               sx={{
                 padding: { xs: 1, sm: 1.5 },
                 bgcolor: 'tertiary.main',
-              }} // TODO: Ändra från ett hårdkodat värde till {currentSeason}
+              }}
             >
-              Vinter (december-februari)
+              {loading ? 'Laddar säsong...' : `${season?.name}, (${season?.months})`}
             </Typography>
           </Stack>
 
