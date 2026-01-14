@@ -1,18 +1,28 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
 import { RecipeCard } from '../../Components/Organisms/RecipeCard';
-import type { RecipeType } from '../../Types/RecipeType';
 import { FeedbackCard } from '../../Components/Organisms/FeedbackCard';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { ReusableButton } from '../../Components/Atoms/ReusableButton';
-import { useWeather } from '../../Context/UseWeather';
+import { useWeather } from '../../Hooks/useWeather';
+import type { RecipeType } from '../../Types/RecipeType';
+import { useState } from 'react';
+import { RandomizerPoolCard } from '../../Components/Organisms/RandomizerPoolCard';
 
-interface Props {
-  recipe?: RecipeType;
-}
-
-export const RandomizerResult = ({ recipe }: Props) => {
+export const RandomizerResult = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { weather, loading, season } = useWeather();
+
+  const initialRecipe = location.state?.recipe as RecipeType;
+  const [currentRecipe, setCurrentRecipe] = useState<RecipeType>(initialRecipe);
+
+  const pool = (location.state?.fullPool as RecipeType[]) || [];
+  const poolLength = (location.state?.poolLength as number) || 0;
+
+  const handleSelectRecipe = (id: string) => {
+    const selected = pool.find((r) => r.id === id);
+    if (selected) setCurrentRecipe(selected);
+  };
 
   return (
     <Container
@@ -22,7 +32,7 @@ export const RandomizerResult = ({ recipe }: Props) => {
         paddingBottom: { xs: '20%', md: '3%' },
       }}
     >
-      {recipe ? (
+      {currentRecipe ? (
         <Box
           sx={{
             display: 'flex',
@@ -35,19 +45,19 @@ export const RandomizerResult = ({ recipe }: Props) => {
           <Box sx={{ paddingBottom: { xs: '10%' } }}>
             <RecipeCard
               variant="big"
-              recipeName={recipe.name}
-              foodImage={recipe.image}
-              alt={`Bild på ${recipe.name}`}
-              season={recipe.suitableSeasons.join(', ')}
-              weather={recipe.suitableWeather.conditions.join(', ')}
+              recipeName={currentRecipe.name}
+              foodImage={currentRecipe.image}
+              alt={`Bild på ${currentRecipe.name}`}
+              season={currentRecipe.suitableSeasons.join(', ')}
+              weather={currentRecipe.suitableWeather.conditions.join(', ')}
               temperature={
-                recipe.suitableWeather.temperature.relation === 'above'
-                  ? `${recipe.suitableWeather.temperature.value}° och uppåt`
-                  : `Under ${recipe.suitableWeather.temperature.value}°`
+                currentRecipe.suitableWeather.temperature.relation === 'above'
+                  ? `${currentRecipe.suitableWeather.temperature.value}° och uppåt`
+                  : `${currentRecipe.suitableWeather.temperature.value}° eller under`
               }
-              portions={`${recipe.portions} personer`}
-              time={recipe.time}
-              description={recipe.description}
+              portions={`${currentRecipe.portions} personer`}
+              time={currentRecipe.time}
+              description={currentRecipe.description}
             />
           </Box>
 
@@ -55,7 +65,7 @@ export const RandomizerResult = ({ recipe }: Props) => {
             <Box>
               <Typography variant="h2">Dagens rätt:</Typography>
               <Typography variant="h4" sx={{ fontWeight: 'bold', marginTop: '8%' }}>
-                {recipe.name}
+                {currentRecipe.name}
               </Typography>
             </Box>
 
@@ -74,7 +84,7 @@ export const RandomizerResult = ({ recipe }: Props) => {
               </Typography>
             </Box>
 
-            <Stack direction="row" spacing={2} sx={{ paddingTop: '3%' }}>
+            <Stack direction="row" spacing={2} sx={{ padding: '3%' }}>
               <ReusableButton
                 btnText="Till recept"
                 onClick={() => navigate('/recipe/:id')} //TODO fixa routing här!
@@ -82,12 +92,19 @@ export const RandomizerResult = ({ recipe }: Props) => {
                 type="button"
               />
               <ReusableButton
-                btnText="Nytt recept"
-                onClick={() => navigate('/slumparen')} //TODO fixa routing här!
+                btnText="Slumpa igen"
+                onClick={() => navigate('/slumparen')}
                 variant="secondary"
                 type="button"
               />
             </Stack>
+
+            <RandomizerPoolCard
+              pool={pool}
+              poolLength={poolLength}
+              currentRecipeId={currentRecipe.id}
+              onRecipeChange={handleSelectRecipe}
+            />
           </Stack>
         </Box>
       ) : (

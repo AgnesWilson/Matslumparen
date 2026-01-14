@@ -1,14 +1,31 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { useRandomizer } from '../../Hooks/useRandomizer';
+import { FeedbackCard } from '../../Components/Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
-import { useWeather } from '../../Context/UseWeather';
 
 export const Randomizer = () => {
+  const { handleRandomize, weather, season, loading, emptyPool } = useRandomizer();
   const navigate = useNavigate();
-  const { weather, loading, season } = useWeather();
 
-  const handleClick = () => {
-    navigate('/resultat');
-  };
+  if (emptyPool) {
+    return (
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: { xs: '20%', sm: '15%', md: '6%' },
+        }}
+      >
+        <FeedbackCard
+          headline="Inga recept matchar just nu"
+          textOne="Du har inga recept som matchar nuvarande säsong och väder."
+          buttonText="Skapa nytt recept"
+          onButtonClick={() => navigate('/nytt-recept')}
+        />
+      </Box>
+    );
+  }
 
   return (
     <Box
@@ -64,7 +81,7 @@ export const Randomizer = () => {
 
           <Button
             variant="contained"
-            onClick={handleClick}
+            onClick={handleRandomize}
             sx={{
               bgcolor: 'accent.main',
               color: 'black',
