@@ -1,6 +1,6 @@
 //The weather data is fetched from https://open-meteo.com
 
-import type { WeatherCondition } from '../Types/WeatherAndSeasonTypes';
+import type { WeatherCondition } from '../Types/WeatherTypes';
 
 export interface WeatherSummary {
   temp: number;

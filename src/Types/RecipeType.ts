@@ -1,5 +1,5 @@
 import type { Seasons } from './SeasonTypes';
-import type { Weather } from './WeatherAndSeasonTypes';
+import type { Weather } from './WeatherTypes';
 
 export type RecipeType = {
   id: string;
