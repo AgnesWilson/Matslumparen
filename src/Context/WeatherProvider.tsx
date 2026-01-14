@@ -1,7 +1,7 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import { fetchStockholmWeather, type WeatherSummary } from '../Services/weatherService';
-import { WeatherContext } from './UseWeather';
 import { getSeasonDetails } from '../Utils/seasonUtils';
+import { WeatherContext } from './WeatherContext';
 
 export function WeatherProvider({ children }: { children: ReactNode }) {
   const [weather, setWeather] = useState<WeatherSummary | null>(null);
