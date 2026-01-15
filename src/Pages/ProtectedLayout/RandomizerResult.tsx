@@ -5,23 +5,26 @@ import { useLocation, useNavigate } from 'react-router';
 import { ReusableButton } from '../../Components/Atoms/ReusableButton';
 import { useWeather } from '../../Hooks/useWeather';
 import type { RecipeType } from '../../Types/RecipeType';
-import { useState } from 'react';
 import { RandomizerPoolCard } from '../../Components/Organisms/RandomizerPoolCard';
+import { useRandomizer } from '../../Hooks/useRandomizer';
 
 export const RandomizerResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { weather, loading, season } = useWeather();
+  const { handleRandomize } = useRandomizer();
 
-  const initialRecipe = location.state?.recipe as RecipeType;
-  const [currentRecipe, setCurrentRecipe] = useState<RecipeType>(initialRecipe);
-
+  const currentRecipe = location.state?.recipe as RecipeType;
   const pool = (location.state?.fullPool as RecipeType[]) || [];
   const poolLength = (location.state?.poolLength as number) || 0;
 
   const handleSelectRecipe = (id: string) => {
     const selected = pool.find((r) => r.id === id);
-    if (selected) setCurrentRecipe(selected);
+    if (selected) {
+      navigate(location.pathname, {
+        state: { ...location.state, recipe: selected },
+      });
+    }
   };
 
   return (
@@ -76,11 +79,10 @@ export const RandomizerResult = () => {
               <Typography variant="body2">
                 {loading
                   ? 'Laddar väder...'
-                  : `Stockholm: ${weather?.temp}° ${weather?.condition.toLowerCase()}`}
+                  : `Vädret i Stockholm: ${weather?.temp}° ${weather?.condition.toLowerCase()}`}
               </Typography>
               <Typography variant="body2">
-                Nuvarande säsong:
-                {loading ? 'Laddar säsong...' : ` ${season?.name}, (${season?.months})`}
+                {loading ? 'Laddar säsong...' : `Nuvarande säsong: ${season?.name}, (${season?.months})`}
               </Typography>
             </Box>
 
@@ -93,7 +95,7 @@ export const RandomizerResult = () => {
               />
               <ReusableButton
                 btnText="Slumpa igen"
-                onClick={() => navigate('/slumparen')}
+                onClick={handleRandomize}
                 variant="secondary"
                 type="button"
               />
