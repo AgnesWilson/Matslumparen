@@ -1,10 +1,21 @@
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  TextField,
+  Tooltip,
+} from '@mui/material';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+import InfoIcon from '@mui/icons-material/Info';
 
 import wobblesImage from '../../assets/wobbles.png';
-import { FormError } from '../Atoms/FormError';
+import { ErrorMessage } from '../Atoms/ErrorMessage';
 import { ReusableButton } from '../Atoms/ReusableButton';
 import { useAuth } from '../../Hooks/useAuth';
 
@@ -70,7 +81,7 @@ export const LogInCard = ({ open, onClose }: Props) => {
     const hasError = validateForm();
     if (hasError) return;
 
-    if (username === 'Johannes' && password === 'Jojo') {
+    if (username === 'Användare ett' && password === 'Ett') {
       login();
       onClose();
       navigate('/slumparen');
@@ -87,13 +98,15 @@ export const LogInCard = ({ open, onClose }: Props) => {
       slotProps={{
         paper: {
           sx: {
-            width: '50vw',
+            width: { xs: '95vw', sm: '80vw', md: '50vw' },
+            maxWidth: '600px',
             height: 'auto',
             backgroundImage: `url(${wobblesImage})`,
-            backgroundSize: '100%',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            padding: '20px',
+            padding: { xs: '10px', sm: '20px' },
             backgroundColor: 'transparent',
+            margin: '16px',
           },
         },
       }}
@@ -106,7 +119,32 @@ export const LogInCard = ({ open, onClose }: Props) => {
             justifyContent: 'space-between',
           }}
         >
-          <DialogTitle id="login-dialog-title">Logga in</DialogTitle>
+          <DialogTitle id="login-dialog-title">
+            Logga in
+            <Tooltip
+              title={
+                <Box sx={{ padding: '5%' }}>
+                  <Box sx={{ fontWeight: 'bold', marginBottom: '8%' }}>Inloggningsuppgifter:</Box>
+                  <Box>Användarnamn: "Användare ett"</Box>
+                  <Box>Lösenord: "Ett"</Box>
+                </Box>
+              }
+              slotProps={{
+                tooltip: {
+                  sx: {
+                    maxWidth: '400px',
+                    minWidth: '300px',
+                    backgroundColor: 'rgba(50, 50, 50, 0.95)',
+                    boxShadow: 3,
+                  },
+                },
+              }}
+            >
+              <IconButton>
+                <InfoIcon />
+              </IconButton>
+            </Tooltip>
+          </DialogTitle>
           <Button onClick={onClose} aria-label="stäng ruta">
             <CloseIcon />
           </Button>
@@ -158,8 +196,8 @@ export const LogInCard = ({ open, onClose }: Props) => {
               slotProps={inputStyles(!!usernameError)}
             />
 
-            {error && <FormError message={error} />}
-            <DialogActions sx={{ paddingBottom: 4 }}>
+            {error && <ErrorMessage message={error} />}
+            <DialogActions sx={{ paddingBottom: 4, flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
               <ReusableButton
                 btnText="Glömt lösenord"
                 onClick={() => navigate('/forgot-password')}

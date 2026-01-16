@@ -7,12 +7,16 @@ import { useWeather } from '../../Hooks/useWeather';
 import type { RecipeType } from '../../Types/RecipeType';
 import { RandomizerPoolCard } from '../../Components/Organisms/RandomizerPoolCard';
 import { useRandomizer } from '../../Hooks/useRandomizer';
+import { useState } from 'react';
+import { ErrorMessage } from '../../Components/Atoms/ErrorMessage';
 
 export const RandomizerResult = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { weather, loading, season } = useWeather();
   const { handleRandomize } = useRandomizer();
+
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const currentRecipe = location.state?.recipe as RecipeType;
   const pool = (location.state?.fullPool as RecipeType[]) || [];
@@ -24,6 +28,17 @@ export const RandomizerResult = () => {
       navigate(location.pathname, {
         state: { ...location.state, recipe: selected },
       });
+    }
+  };
+
+  const redoRandomizer = () => {
+    if (poolLength === 1) {
+      setErrorMessage(
+        'Du kan inte slumpa ett nytt recept då det endast finns ett recept som passar väder och säsongkriterierna.'
+      );
+    } else {
+      setErrorMessage('');
+      handleRandomize();
     }
   };
 
@@ -95,11 +110,13 @@ export const RandomizerResult = () => {
               />
               <ReusableButton
                 btnText="Slumpa igen"
-                onClick={handleRandomize}
+                onClick={redoRandomizer}
                 variant="secondary"
                 type="button"
               />
             </Stack>
+
+            <ErrorMessage message={errorMessage} variant={'error'} />
 
             <RandomizerPoolCard
               pool={pool}

@@ -1,21 +1,24 @@
 import { FormHelperText } from '@mui/material';
 
-interface FormErrorProps {
+interface Props {
   message: string;
+  variant?: 'formError' | 'error';
 }
 
-export const FormError = ({ message }: FormErrorProps) => {
+export const ErrorMessage = ({ message, variant = 'formError' }: Props) => {
   if (!message) return null;
+
+  const isFormError = variant === 'formError';
   return (
     <FormHelperText
       error
       role="alert"
       sx={{
-        backgroundColor: 'rgba(190, 31, 31, 0.26)',
+        backgroundColor: isFormError ? 'rgba(190, 31, 31, 0.26)' : '#F9B79F',
         color: '#700000 !important',
         border: '1px solid #700000',
         display: 'block',
-        textAlign: 'end',
+        textAlign: isFormError ? 'end' : 'start',
         fontSize: '0.9em',
         padding: 1.5,
         borderRadius: 1,

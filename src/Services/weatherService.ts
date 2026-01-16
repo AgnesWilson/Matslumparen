@@ -12,7 +12,7 @@ const DUMMY_WEATHER: WeatherSummary = {
   temp: 18,
   condition: 'Soligt',
 };
-const USE_DUMMY_DATA = false;
+const USE_DUMMY_DATA = true;
 //
 
 export const fetchStockholmWeather = async (): Promise<WeatherSummary> => {
