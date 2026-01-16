@@ -12,15 +12,15 @@ const BoxStyles = {
 };
 
 interface Props {
-  variant?: 'small' | 'big';
+  variant?: 'small' | 'big' | 'account';
   recipeName: string;
   foodImage: string;
   alt: string;
   season: string;
   weather: string;
   temperature: string;
-  portions: string;
-  time: string;
+  portions?: string;
+  time?: string;
   description?: string;
 }
 
@@ -39,6 +39,8 @@ export const RecipeCard = ({
   const navigate = useNavigate();
 
   const isBig = variant === 'big';
+  const isAccount = variant === 'account';
+
   return (
     <Card
       elevation={5}
@@ -67,9 +69,12 @@ export const RecipeCard = ({
         }}
       />
       <Box sx={BoxStyles}>
-        <RecipeCardSmallBox header="Säsong" text={season}></RecipeCardSmallBox>
-        <RecipeCardSmallBox header="Väder" text={weather}></RecipeCardSmallBox>
-        <RecipeCardSmallBox header="Temperatur" text={temperature}></RecipeCardSmallBox>
+        <RecipeCardSmallBox header={isAccount ? 'Namn' : 'Säsong'} text={season}></RecipeCardSmallBox>
+        <RecipeCardSmallBox header={isAccount ? 'Ålder' : 'Väder'} text={weather}></RecipeCardSmallBox>
+        <RecipeCardSmallBox
+          header={isAccount ? 'E-post' : 'Temperatur'}
+          text={temperature}
+        ></RecipeCardSmallBox>
       </Box>
       <Box
         sx={{
@@ -92,7 +97,7 @@ export const RecipeCard = ({
       ) : (
         <Box sx={BoxStyles}>
           <ReusableButton
-            btnText="Till receptet"
+            btnText={isAccount ? 'Redigera' : 'Till receptet'}
             onClick={() => navigate('/recipe/:id')} //TODO fixa routing här!
             variant="primary"
             type="button"

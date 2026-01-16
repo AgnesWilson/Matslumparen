@@ -18,6 +18,8 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link, useLocation } from 'react-router';
+import { ArrowBackRounded } from '@mui/icons-material';
+import { useAuth } from '../Hooks/useAuth';
 
 const TabsStyles = {
   '& .MuiTabs-flexContainer': {
@@ -38,9 +40,10 @@ const TabsStyles = {
 
 export const NavTabs = () => {
   const location = useLocation();
-  const [open, setOpen] = useState(false);
-
+  const { logout } = useAuth();
+  const { isAuthenticated } = useAuth();
   const theme = useTheme();
+  const [open, setOpen] = useState(false);
   const isTabletOrMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const navItems = [
@@ -58,6 +61,8 @@ export const NavTabs = () => {
     return 0;
   };
 
+  const showLogout = isAuthenticated && location.pathname.startsWith('/konto');
+
   return (
     <Box component="nav" aria-label="Huvudmeny" sx={{ width: '100%' }}>
       {isTabletOrMobile ? (
@@ -70,7 +75,19 @@ export const NavTabs = () => {
               backgroundColor: 'accent.main',
             }}
           >
-            <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+              {showLogout && (
+                <IconButton
+                  color="inherit"
+                  aria-label="Logga ut"
+                  onClick={() => {
+                    logout();
+                  }}
+                >
+                  <ArrowBackRounded />
+                  <Typography sx={{ marginRight: 1 }}>Logga ut</Typography>
+                </IconButton>
+              )}
               <IconButton edge="end" color="inherit" aria-label="Öppna meny" onClick={() => setOpen(true)}>
                 <MenuIcon />
                 <Typography sx={{ marginLeft: 1 }}>Meny</Typography>
