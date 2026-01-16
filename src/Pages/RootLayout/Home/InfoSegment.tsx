@@ -115,7 +115,7 @@ export const InfoSegment = ({ recipe = mockRecipe }: Props) => {
               }
               portions={`${recipe.portions} personer`}
               time={recipe.time}
-              description={recipe.description}
+              comments={recipe.comments}
             ></RecipeCard>
           )}
         </Box>

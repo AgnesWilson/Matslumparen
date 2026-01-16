@@ -12,7 +12,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4-6',
     time: '45 min',
-    description:
+    comments:
       'En riktig räddare i nöden när det är ruggigt ute. Den sköter sig själv på spisen och halloumin ger det där lilla extra tugget. Receptet kommer egentligen från Tuvessonskans receptbok Tomat, tomat tomat (s.5).',
   },
   {
@@ -26,7 +26,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '15 min',
-    description:
+    comments:
       'När solen gassar och man knappt orkar starta spisen är det här räddningen. Sältan från fetan och sötman från melon är en oslagbar kombo. Glöm inte massor av mynta!',
   },
   {
@@ -40,7 +40,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '6',
     time: '60 min',
-    description:
+    comments:
       'En mustig chili som bara blir godare ju längre den får stå. Chokladen ger ett djup som gör att man inte saknar köttet en sekund. Perfekt för storkok!',
   },
   {
@@ -54,7 +54,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '30 min',
-    description:
+    comments:
       'Dessa burgare blir otroligt saftiga. Släng dem på grillen eller stek i panna, oavsett blir det succé. Servera med en rejäl klick chilimajonnäs.',
   },
   {
@@ -68,7 +68,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '25 min',
-    description:
+    comments:
       'Billigt, snabbt och förvånansvärt gott. Citronen piggar upp och spenaten ger en härlig färg. En riktig vardagsklassiker som alltid funkar.',
   },
   {
@@ -82,7 +82,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-3',
     time: '20 min',
-    description:
+    comments:
       'Pannan direkt på bordet! En perfekt brunch eller snabbmiddag. Doppa ett rejält surdegsbröd i de krämiga äggulorna och njut av enkelheten.',
   },
   {
@@ -96,7 +96,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '20 min',
-    description:
+    comments:
       'Det ultimata tillbehöret på grillfesten. Chilismöret rinner ner mellan kornen och gör det hela orimligt gott. Äts bäst utomhus med servetter nära till hands.',
   },
   {
@@ -110,7 +110,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '50 min',
-    description:
+    comments:
       'Riktigt värmande och förvånansvärt lättlagad soppa. Ingefäran ger den ett extra litet sting och det känns alltid bra att ladda upp med välgörande ingefära när det är kallt ute.',
   },
   {
@@ -124,7 +124,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2',
     time: '20 min',
-    description:
+    comments:
       'Krispigt, fräscht och fullt med färg. Dressingen på sesamolja och lime är beroendeframkallande. Perfekt att förbereda i burk om man ska iväg på picknick.',
   },
   {
@@ -138,7 +138,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '40 min',
-    description:
+    comments:
       'Lite tålamod vid spisen och ett glas vin i handen, så har du snart världens godaste middag. Använd den svamp du gillar bäst – champinjoner funkar lika bra som skogens guld.',
   },
   {
@@ -152,7 +152,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '25 min',
-    description:
+    comments:
       'Snabbt käk som alla gillar. Köp färdig falafel för att spara tid, men lägg krutet på den picklade löken och en god vitlökssås. Perfekt mat att äta framför en serie.',
   },
   {
@@ -166,7 +166,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2',
     time: '55 min',
-    description:
+    comments:
       'När snön yr utanför är det här den ultimata tröstmaten. Löken får karamelliseras länge för maxad smak. Och ärligt talat – vem kan motstå gratinerad ost?',
   },
   {
@@ -180,7 +180,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '15 min',
-    description:
+    comments:
       'En iskall soppa som smakar semester. Mixa ihop allt och låt stå i kylen ett tag så smakerna sätter sig ordentligt. En livräddare när termometern tickar uppåt.',
   },
   {
@@ -194,7 +194,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '40 min',
-    description:
+    comments:
       'Varmt, kryddigt och mjukt. Paneer-osten suger upp den krämiga såsen på ett fantastiskt sätt. Serveras bäst med ett fluffigt naanbröd och lite matlagningsyoghurt.',
   },
   {
@@ -208,7 +208,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '15 min',
-    description:
+    comments:
       'Primörer, massa citronzest och en bra olivolja är allt som behövs. Går galet snabbt att kasta ihop efter en lång dag ute i solen. Får du inte tag i sparris går det bra att byta ut måt någon annan god grönsak.',
   },
   {
@@ -222,7 +222,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '45 min',
-    description:
+    comments:
       'En lite lyxigare vegoburgare. Jordigheten från rödbetorna och syran från chèvren är en oslagbar kombo. Gör gärna extra chèvrekräm – den går alltid åt!',
   },
   {
@@ -236,7 +236,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '6',
     time: '45 min',
-    description:
+    comments:
       'Lika mustig som en vanlig bolognese men gjord på små svarta linser. De håller formen bra och ger ett härligt tugg. Riktig life-saver som alltid går snabbt att göra och som faller ala i smaken.',
   },
   {
@@ -250,7 +250,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2',
     time: '40 min',
-    description:
+    comments:
       'Rulla dina egna favoriter! Ställ fram alla ingredienser på bordet och låt alla göra sina egna rullar. Superfräscht och perfekt för en varm kväll med vänner.',
   },
   {
@@ -264,7 +264,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '20 min',
-    description:
+    comments:
       'En fransk klassiker som låter grönsakerna tala för sig själva. Servera med ungsrostad potatis eller bara ett riktigt gott bröd att suga upp den goda tomatsåsen med.',
   },
   {
@@ -278,7 +278,7 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '40 min',
-    description:
+    comments:
       'Blomkål kan vara lite tråkigt, men inte här! När den rostas i ugnen får den en nötig smak som passar perfekt med den krämiga tahinisåsen och lite granatäppelkärnor.',
   },
 ];

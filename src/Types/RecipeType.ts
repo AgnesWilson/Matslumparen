@@ -10,5 +10,7 @@ export type RecipeType = {
   suitableWeather: Weather;
   portions: string;
   time: string;
-  description: string;
+  comments: string;
+  instructions?: string[];
+  ingredients?: string[];
 };

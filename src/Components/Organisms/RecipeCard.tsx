@@ -21,7 +21,7 @@ interface Props {
   temperature: string;
   portions?: string;
   time?: string;
-  description?: string;
+  comments?: string;
 }
 
 export const RecipeCard = ({
@@ -34,7 +34,7 @@ export const RecipeCard = ({
   temperature,
   portions,
   time,
-  description,
+  comments,
 }: Props) => {
   const navigate = useNavigate();
 
@@ -92,7 +92,7 @@ export const RecipeCard = ({
       </Box>
       {isBig ? (
         <Typography variant="body2" fontWeight="bold" gutterBottom sx={{ padding: '5%', lineHeight: '170%' }}>
-          {description}
+          {comments}
         </Typography>
       ) : (
         <Box sx={BoxStyles}>

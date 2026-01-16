@@ -75,7 +75,7 @@ export const RandomizerResult = () => {
               }
               portions={`${currentRecipe.portions} personer`}
               time={currentRecipe.time}
-              description={currentRecipe.description}
+              comments={currentRecipe.comments}
             />
           </Box>
 
