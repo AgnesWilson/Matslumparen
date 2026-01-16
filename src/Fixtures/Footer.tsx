@@ -2,10 +2,12 @@ import { ArrowForward } from '@mui/icons-material';
 import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 
 interface Props {
-  onLoginClick: () => void;
+  onClick: () => void;
+  variant?: 'home' | 'account';
 }
 
-export const Footer = ({ onLoginClick }: Props) => {
+export const Footer = ({ onClick, variant = 'home' }: Props) => {
+  const isAccount = variant === 'account';
   return (
     <footer>
       <AppBar
@@ -17,9 +19,11 @@ export const Footer = ({ onLoginClick }: Props) => {
           height: 60,
         }}
       >
-        <Toolbar sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-          <IconButton color="inherit" aria-label="Logga in" onClick={onLoginClick}>
-            <Typography sx={{ marginRight: 1 }}>Logga in på ditt konto</Typography>
+        <Toolbar sx={{ display: 'flex', justifyContent: isAccount ? 'flex-end' : 'flex-start' }}>
+          <IconButton color="inherit" aria-label="Logga in" onClick={onClick}>
+            <Typography sx={{ marginRight: 1 }}>
+              {isAccount ? 'Logga ut' : 'Logga in på ditt konto'}
+            </Typography>
             <ArrowForward />
           </IconButton>
         </Toolbar>

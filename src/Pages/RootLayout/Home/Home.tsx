@@ -63,7 +63,7 @@ export const Home = () => {
 
       <LinkButton activeSection={activeSection} onToggleScroll={handleScrollToggle} />
 
-      <Footer onLoginClick={() => setIsLoginOpen(true)} />
+      <Footer onClick={() => setIsLoginOpen(true)} />
       <LogInCard open={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </Box>
   );

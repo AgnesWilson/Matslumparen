@@ -6,6 +6,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import wobblesImage from '../../assets/wobbles.png';
 import { FormError } from '../Atoms/FormError';
 import { ReusableButton } from '../Atoms/ReusableButton';
+import { useAuth } from '../../Hooks/useAuth';
 
 // TODO: Add icons to error messages !!
 
@@ -28,6 +29,7 @@ const inputStyles = (hasError: boolean) => ({
 
 export const LogInCard = ({ open, onClose }: Props) => {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -69,6 +71,8 @@ export const LogInCard = ({ open, onClose }: Props) => {
     if (hasError) return;
 
     if (username === 'Johannes' && password === 'Jojo') {
+      login();
+      onClose();
       navigate('/slumparen');
     } else {
       setError('Felaktigt användarnamn eller lösenord');
