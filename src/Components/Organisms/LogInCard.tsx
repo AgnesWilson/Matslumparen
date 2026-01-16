@@ -4,7 +4,7 @@ import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 
 import wobblesImage from '../../assets/wobbles.png';
-import { FormError } from '../Atoms/FormError';
+import { ErrorMessage } from '../Atoms/ErrorMessage';
 import { ReusableButton } from '../Atoms/ReusableButton';
 import { useAuth } from '../../Hooks/useAuth';
 
@@ -70,7 +70,7 @@ export const LogInCard = ({ open, onClose }: Props) => {
     const hasError = validateForm();
     if (hasError) return;
 
-    if (username === 'Johannes' && password === 'Jojo') {
+    if (username === 'Användare ett' && password === 'Ett') {
       login();
       onClose();
       navigate('/slumparen');
@@ -87,13 +87,15 @@ export const LogInCard = ({ open, onClose }: Props) => {
       slotProps={{
         paper: {
           sx: {
-            width: '50vw',
+            width: { xs: '95vw', sm: '80vw', md: '50vw' },
+            maxWidth: '600px',
             height: 'auto',
             backgroundImage: `url(${wobblesImage})`,
-            backgroundSize: '100%',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            padding: '20px',
+            padding: { xs: '10px', sm: '20px' },
             backgroundColor: 'transparent',
+            margin: '16px',
           },
         },
       }}
@@ -158,8 +160,8 @@ export const LogInCard = ({ open, onClose }: Props) => {
               slotProps={inputStyles(!!usernameError)}
             />
 
-            {error && <FormError message={error} />}
-            <DialogActions sx={{ paddingBottom: 4 }}>
+            {error && <ErrorMessage message={error} />}
+            <DialogActions sx={{ paddingBottom: 4, flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
               <ReusableButton
                 btnText="Glömt lösenord"
                 onClick={() => navigate('/forgot-password')}
