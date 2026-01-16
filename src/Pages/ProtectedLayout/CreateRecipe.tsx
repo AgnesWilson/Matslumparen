@@ -1,3 +1,5 @@
+import { SingleRecipe } from './SingleRecipe';
+
 export const CreateRecipe = () => {
-  return <div></div>;
+  return <SingleRecipe />;
 };
