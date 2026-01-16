@@ -30,12 +30,12 @@ export const YourAccount = () => {
         <Box sx={{ paddingBottom: { xs: '10%' } }}>
           <RecipeCard
             variant="account"
-            recipeName="Användare ett"
+            recipeName="Johannes"
             foodImage={userImg}
-            alt="Bild på Användare ett"
-            season="Användare Ett"
+            alt="Bild på Johannes"
+            season="Johannes Bäckelin"
             weather="30"
-            temperature="användare.ett@gmail.com"
+            temperature="johannes.backelin@google.com"
           />
         </Box>
 

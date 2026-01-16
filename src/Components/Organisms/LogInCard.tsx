@@ -81,7 +81,7 @@ export const LogInCard = ({ open, onClose }: Props) => {
     const hasError = validateForm();
     if (hasError) return;
 
-    if (username === 'Användare ett' && password === 'Ett') {
+    if (username === 'Johannes' && password === 'Jojo') {
       login();
       onClose();
       navigate('/slumparen');
@@ -125,8 +125,8 @@ export const LogInCard = ({ open, onClose }: Props) => {
               title={
                 <Box sx={{ padding: '5%' }}>
                   <Box sx={{ fontWeight: 'bold', marginBottom: '8%' }}>Inloggningsuppgifter:</Box>
-                  <Box>Användarnamn: "Användare ett"</Box>
-                  <Box>Lösenord: "Ett"</Box>
+                  <Box>Användarnamn: "Johannes"</Box>
+                  <Box>Lösenord: "Jojo"</Box>
                 </Box>
               }
               slotProps={{

@@ -75,7 +75,7 @@ export const NavTabs = () => {
               backgroundColor: 'accent.main',
             }}
           >
-            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Toolbar sx={{ display: 'flex' }}>
               {showLogout && (
                 <IconButton
                   color="inherit"
@@ -88,7 +88,8 @@ export const NavTabs = () => {
                   <Typography sx={{ marginRight: 1 }}>Logga ut</Typography>
                 </IconButton>
               )}
-              <IconButton edge="end" color="inherit" aria-label="Öppna meny" onClick={() => setOpen(true)}>
+              <Box sx={{ flexGrow: 1 }} />
+              <IconButton color="inherit" aria-label="Öppna meny" onClick={() => setOpen(true)}>
                 <MenuIcon />
                 <Typography sx={{ marginLeft: 1 }}>Meny</Typography>
               </IconButton>
