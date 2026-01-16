@@ -1,7 +1,18 @@
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  TextField,
+  Tooltip,
+} from '@mui/material';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+import InfoIcon from '@mui/icons-material/Info';
 
 import wobblesImage from '../../assets/wobbles.png';
 import { ErrorMessage } from '../Atoms/ErrorMessage';
@@ -108,7 +119,32 @@ export const LogInCard = ({ open, onClose }: Props) => {
             justifyContent: 'space-between',
           }}
         >
-          <DialogTitle id="login-dialog-title">Logga in</DialogTitle>
+          <DialogTitle id="login-dialog-title">
+            Logga in
+            <Tooltip
+              title={
+                <Box sx={{ padding: '5%' }}>
+                  <Box sx={{ fontWeight: 'bold', marginBottom: '8%' }}>Inloggningsuppgifter:</Box>
+                  <Box>Användarnamn: "Användare ett"</Box>
+                  <Box>Lösenord: "Ett"</Box>
+                </Box>
+              }
+              slotProps={{
+                tooltip: {
+                  sx: {
+                    maxWidth: '400px',
+                    minWidth: '300px',
+                    backgroundColor: 'rgba(50, 50, 50, 0.95)',
+                    boxShadow: 3,
+                  },
+                },
+              }}
+            >
+              <IconButton>
+                <InfoIcon />
+              </IconButton>
+            </Tooltip>
+          </DialogTitle>
           <Button onClick={onClose} aria-label="stäng ruta">
             <CloseIcon />
           </Button>
