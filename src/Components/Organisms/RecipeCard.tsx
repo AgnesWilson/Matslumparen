@@ -12,6 +12,7 @@ const BoxStyles = {
 };
 
 interface Props {
+  id?: string;
   variant?: 'small' | 'big' | 'account';
   recipeName: string;
   foodImage: string;
@@ -25,6 +26,7 @@ interface Props {
 }
 
 export const RecipeCard = ({
+  id,
   variant = 'small',
   recipeName,
   foodImage,
@@ -98,7 +100,7 @@ export const RecipeCard = ({
         <Box sx={BoxStyles}>
           <ReusableButton
             btnText={isAccount ? 'Redigera' : 'Till receptet'}
-            onClick={() => navigate('/recipe/:id')} //TODO fixa routing här!
+            onClick={() => navigate(`/recept/${id}`)}
             variant="primary"
             type="button"
           ></ReusableButton>

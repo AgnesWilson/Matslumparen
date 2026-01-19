@@ -104,7 +104,7 @@ export const RandomizerResult = () => {
             <Stack direction="row" spacing={2} sx={{ padding: '3%' }}>
               <ReusableButton
                 btnText="Till recept"
-                onClick={() => navigate('/recipe/:id')} //TODO fixa routing här!
+                onClick={() => navigate(`/recept/${currentRecipe.id}`)}
                 variant="primary"
                 type="button"
               />

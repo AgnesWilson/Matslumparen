@@ -32,6 +32,7 @@ export const YourRecipesGrid = ({ recipes }: Props) => {
           {recipes.map((recipe) => (
             <RecipeCard
               key={recipe.id}
+              id={recipe.id}
               recipeName={recipe.name}
               foodImage={recipe.image}
               alt={`Bild på ${recipe.name}`}

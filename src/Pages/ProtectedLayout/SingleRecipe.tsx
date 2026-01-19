@@ -1,24 +1,43 @@
-import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material';
+import { Box, Container, IconButton, Stack, Typography, useMediaQuery } from '@mui/material';
 import { RecipeCard } from '../../Components/Organisms/RecipeCard';
 import { ReusableButton } from '../../Components/Atoms/ReusableButton';
-import { mockRecipe } from '../../MockData/SingleRecipe';
-import type { RecipeType } from '../../Types/RecipeType';
 import { theme } from '../../theme';
+import { useNavigate, useParams } from 'react-router';
+import { mockRecipes } from '../../MockData/Recipes';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 
-interface Props {
-  recipe?: RecipeType;
-}
-
-export const SingleRecipe = ({ recipe = mockRecipe }: Props) => {
+export const SingleRecipe = () => {
+  const { id } = useParams<{ id: string }>();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const navigate = useNavigate();
+
+  const recipe = mockRecipes.find((r) => r.id === id);
+
+  if (!recipe) {
+    return <Typography>Receptet hittades inte!</Typography>;
+  }
 
   return (
     <Container
       sx={{
-        paddingTop: { xs: '15%', sm: '5%', md: '6%' },
+        paddingTop: { xs: '10%', sm: '2%', md: '3%' },
         paddingBottom: { xs: '20%', md: '3%' },
       }}
     >
+      <IconButton onClick={() => navigate(-1)} sx={{ marginBottom: '20px', color: 'black' }}>
+        <ArrowCircleLeftIcon
+          sx={{
+            color: 'secondary.main',
+            fontSize: {
+              xs: '2.2rem',
+              sm: '2.5rem',
+              md: '3rem',
+              lg: '3.5rem',
+            },
+          }}
+        />
+        <Typography sx={{ marginLeft: 1 }}>Tillbaka</Typography>
+      </IconButton>
       <Box
         sx={{
           display: 'flex',
