@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import { Outlet, Navigate } from 'react-router';
 import { NavTabs } from '../../Fixtures/NavTabs';
 import { useAuth } from '../../Hooks/useAuth';
+import { ScrollToTop } from '../../Hooks/ScrollToTop';
 
 export const ProtectedLayout = () => {
   const { isAuthenticated } = useAuth();
@@ -12,6 +13,7 @@ export const ProtectedLayout = () => {
 
   return (
     <Box>
+      <ScrollToTop />
       <NavTabs />
 
       <div>
