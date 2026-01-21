@@ -5,6 +5,7 @@ import { theme } from '../../theme';
 import { useNavigate, useParams } from 'react-router';
 import { mockRecipes } from '../../MockData/Recipes';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import { twoColumnPageStyle } from '../../Styles/sharedStyles';
 
 export const SingleRecipe = () => {
   const { id } = useParams<{ id: string }>();
@@ -38,15 +39,7 @@ export const SingleRecipe = () => {
         />
         <Typography sx={{ marginLeft: 1 }}>Tillbaka</Typography>
       </IconButton>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          alignItems: { xs: 'center', md: 'flex-start' },
-          justifyContent: 'center',
-          gap: '10%',
-        }}
-      >
+      <Box sx={twoColumnPageStyle}>
         <Box
           sx={{
             paddingBottom: { xs: '10%' },

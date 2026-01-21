@@ -6,6 +6,7 @@ import { Footer } from '../../Fixtures/Footer';
 import { useAuth } from '../../Hooks/useAuth';
 import { theme } from '../../theme';
 import userImg from '../../assets/userImg.png';
+import { twoColumnPageStyle } from '../../Styles/sharedStyles';
 
 export const YourAccount = () => {
   const { logout } = useAuth();
@@ -18,15 +19,7 @@ export const YourAccount = () => {
         paddingBottom: { xs: '20%', md: '3%' },
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
-          alignItems: { xs: 'center', md: 'flex-start' },
-          justifyContent: 'center',
-          gap: '10%',
-        }}
-      >
+      <Box sx={twoColumnPageStyle}>
         <Box sx={{ paddingBottom: { xs: '10%' } }}>
           <RecipeCard
             variant="account"

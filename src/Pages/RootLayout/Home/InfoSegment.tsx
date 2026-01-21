@@ -41,8 +41,7 @@ export const InfoSegment = ({ recipe = mockRecipe }: Props) => {
           <Box sx={{ ...h2BoxStyles, rotate: '-3deg', maxWidth: 1000 }}>
             <Typography variant="h2">Hur funkar det?</Typography>
           </Box>
-          <Typography
-            variant="h4"
+          <Box
             component="ol"
             sx={{
               paddingLeft: '20%',
@@ -52,10 +51,16 @@ export const InfoSegment = ({ recipe = mockRecipe }: Props) => {
               gap: 5,
             }}
           >
-            <li>Ladda upp dina recept</li>
-            <li>Vi kollar vädret och säsongen</li>
-            <li>Du får dagens perfekta förslag</li>
-          </Typography>
+            <Typography variant="h4" component="li">
+              Ladda upp dina recept
+            </Typography>
+            <Typography variant="h4" component="li">
+              Vi kollar vädret och säsongen
+            </Typography>
+            <Typography variant="h4" component="li">
+              Du får dagens perfekta förslag
+            </Typography>
+          </Box>
 
           <Card
             sx={{

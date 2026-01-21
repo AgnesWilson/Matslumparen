@@ -9,6 +9,7 @@ import { RandomizerPoolCard } from '../../Components/Organisms/RandomizerPoolCar
 import { useRandomizer } from '../../Hooks/useRandomizer';
 import { useState } from 'react';
 import { ErrorMessage } from '../../Components/Atoms/ErrorMessage';
+import { twoColumnPageStyle } from '../../Styles/sharedStyles';
 
 export const RandomizerResult = () => {
   const navigate = useNavigate();
@@ -51,15 +52,7 @@ export const RandomizerResult = () => {
       }}
     >
       {currentRecipe ? (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: { xs: 'center', md: 'flex-start' },
-            justifyContent: 'center',
-            gap: '10%',
-          }}
-        >
+        <Box sx={twoColumnPageStyle}>
           <Box sx={{ paddingBottom: { xs: '10%' } }}>
             <RecipeCard
               variant="big"
