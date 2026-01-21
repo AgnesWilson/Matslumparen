@@ -12,8 +12,28 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4-6',
     time: '45 min',
-    description:
+    comments:
       'En riktig räddare i nöden när det är ruggigt ute. Den sköter sig själv på spisen och halloumin ger det där lilla extra tugget. Receptet kommer egentligen från Tuvessonskans receptbok Tomat, tomat tomat (s.5).',
+    ingredients: [
+      '400 g halloumi',
+      '2 dl torkade röda linser',
+      '1 gul lök',
+      '2 vitlöksklyftor',
+      '1 msk tomatpuré',
+      '1 burk krossade tomater',
+      '2 dl crème fraiche',
+      '1 grönsaksbuljongtärning',
+      '2 tsk torkad timjan',
+      'Olja till stekning',
+      'Salt och peppar',
+    ],
+    instructions: [
+      'Hacka lök och vitlök. Fräs mjuka i olja i en stor gryta.',
+      'Tärna halloumin och stek med löken tills den får lite färg.',
+      'Tillsätt tomatpuré, krossade tomater, linser, buljong och timjan.',
+      'Låt sjuda under lock i ca 15-20 minuter tills linserna är mjuka.',
+      'Rör ner crème fraiche och smaka av med salt och peppar.',
+    ],
   },
   {
     id: '2',
@@ -26,8 +46,24 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '15 min',
-    description:
+    comments:
       'När solen gassar och man knappt orkar starta spisen är det här räddningen. Sältan från fetan och sötman från melon är en oslagbar kombo. Glöm inte massor av mynta!',
+    ingredients: [
+      '1/2 liten vattenmelon',
+      '150 g fetaost',
+      '1/2 rödlök',
+      '1 kruka färsk mynta',
+      '2 msk olivolja',
+      '1 msk limejuice',
+      'Flingsalt',
+    ],
+    instructions: [
+      'Skär vattenmelonen i lagom stora tärningar.',
+      'Smula fetaosten grovt över melonen.',
+      'Skiva rödlöken tunt och strö över.',
+      'Grovhacka myntan och vänd ner försiktigt.',
+      'Ringla över olivolja, limejuice och avsluta med flingsalt.',
+    ],
   },
   {
     id: '3',
@@ -40,8 +76,27 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '6',
     time: '60 min',
-    description:
+    comments:
       'En mustig chili som bara blir godare ju längre den får stå. Chokladen ger ett djup som gör att man inte saknar köttet en sekund. Perfekt för storkok!',
+    ingredients: [
+      '2 stora sötpotatisar',
+      '2 burkar svarta bönor',
+      '1 gul lök',
+      '3 vitlöksklyftor',
+      '1 msk chilipulver',
+      '1 tsk rökt paprikapulver',
+      '1 burk krossade tomater',
+      '20 g mörk choklad (minst 70%)',
+      '5 dl vatten + 1 buljongtärning',
+      'Lime och gräddfil till servering',
+    ],
+    instructions: [
+      'Skala och tärna sötpotatisen. Hacka lök och vitlök.',
+      'Fräs lök och kryddor i en stor kastrull. Tillsätt sötpotatis.',
+      'Häll i tomater, vatten och buljong. Låt koka ca 30 minuter.',
+      'Tillsätt avsköljda bönor och chokladbiten. Rör om tills chokladen smält.',
+      'Låt sjuda 10 minuter till. Serveras med lime och gräddfil.',
+    ],
   },
   {
     id: '4',
@@ -54,8 +109,24 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '30 min',
-    description:
+    comments:
       'Dessa burgare blir otroligt saftiga. Släng dem på grillen eller stek i panna, oavsett blir det succé. Servera med en rejäl klick chilimajonnäs.',
+    ingredients: [
+      '1 zucchini',
+      '200 g halloumi',
+      '1 ägg',
+      '1/2 dl ströbröd',
+      '1 tsk torkad oregano',
+      '4 hamburgerbröd',
+      'Sallad, tomat och rödlök',
+      'Chilimajonnäs',
+    ],
+    instructions: [
+      'Riv zucchini och halloumi grovt. Pressa ur vätskan ur zucchinin noga.',
+      'Blanda zucchini, halloumi, ägg, ströbröd och oregano i en bunke.',
+      'Forma till 4 biffar. Stek i olja ca 4-5 minuter per sida.',
+      'Rosta bröden och montera burgaren med grönsaker och chilimajonnäs.',
+    ],
   },
   {
     id: '5',
@@ -68,8 +139,23 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '25 min',
-    description:
+    comments:
       'Billigt, snabbt och förvånansvärt gott. Citronen piggar upp och spenaten ger en härlig färg. En riktig vardagsklassiker som alltid funkar.',
+    ingredients: [
+      '3 dl röda linser',
+      '1 gul lök',
+      '2 tsk gurkmeja',
+      '1 liter grönsaksbuljong',
+      '100 g färsk spenat',
+      '1 citron (saft och skal)',
+      'Salt och peppar',
+    ],
+    instructions: [
+      'Fräs hackad lök och gurkmeja i en kastrull.',
+      'Tillsätt linser och buljong. Koka i ca 15 minuter.',
+      'Vänd ner spenaten så att den slokar.',
+      'Pressa i citron och smaka av med salt och peppar.',
+    ],
   },
   {
     id: '6',
@@ -82,8 +168,24 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-3',
     time: '20 min',
-    description:
+    comments:
       'Pannan direkt på bordet! En perfekt brunch eller snabbmiddag. Doppa ett rejält surdegsbröd i de krämiga äggulorna och njut av enkelheten.',
+    ingredients: [
+      '1 burk krossade tomater',
+      '4-5 ägg',
+      '1 röd paprika',
+      '1 tsk spiskummin',
+      '1 tsk paprikapulver',
+      'Persilja till garnering',
+      'Bröd till servering',
+    ],
+    instructions: [
+      'Tärna paprika och fräs mjuk i en stekpanna.',
+      'Häll på tomater och kryddor. Låt puttra 5-10 minuter.',
+      'Gör små gropar i såsen och knäck i äggen.',
+      'Lägg på ett lock och låt sjuda tills äggvitan stelnat men gulan är krämig.',
+      'Toppa med persilja och servera direkt ur pannan.',
+    ],
   },
   {
     id: '7',
@@ -96,8 +198,21 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '20 min',
-    description:
+    comments:
       'Det ultimata tillbehöret på grillfesten. Chilismöret rinner ner mellan kornen och gör det hela orimligt gott. Äts bäst utomhus med servetter nära till hands.',
+    ingredients: [
+      '4 färska majskolvar',
+      '75 g rumsvarmt smör',
+      '1 tsk chiliflakes',
+      '1 vitlöksklyfta (pressad)',
+      '1 msk hackad koriander',
+      'Flingsalt',
+    ],
+    instructions: [
+      'Blanda smör, chili, vitlök och koriander i en skål.',
+      'Grilla majskolvarna runt om tills de får fin färg och blir mjuka.',
+      'Klicka på chilismöret direkt på de heta majskolvarna och strö över flingsalt.',
+    ],
   },
   {
     id: '8',
@@ -110,8 +225,23 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '50 min',
-    description:
+    comments:
       'Riktigt värmande och förvånansvärt lättlagad soppa. Ingefäran ger den ett extra litet sting och det känns alltid bra att ladda upp med välgörande ingefära när det är kallt ute.',
+    ingredients: [
+      '2 stora sötpotatisar',
+      '2 dl röda linser',
+      '3 cm färsk ingefära',
+      '1 gul lök',
+      '1 burk kokosmjölk',
+      '8 dl vatten + grönsaksbuljong',
+      'Saften från 1/2 lime',
+    ],
+    instructions: [
+      'Skala och dela sötpotatis och lök. Riv ingefäran.',
+      'Fräs lök och ingefära i en stor kastrull.',
+      'Tillsätt sötpotatis, linser, vatten och buljong. Koka tills potatisen är helt mjuk.',
+      'Mixa soppan slät med stavmixer. Rör ner kokosmjölken och smaka av med lime.',
+    ],
   },
   {
     id: '9',
@@ -124,8 +254,24 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2',
     time: '20 min',
-    description:
+    comments:
       'Krispigt, fräscht och fullt med färg. Dressingen på sesamolja och lime är beroendeframkallande. Perfekt att förbereda i burk om man ska iväg på picknick.',
+    ingredients: [
+      '150 g risnudlar',
+      '2 dl edamamebönor',
+      '1 morot (strimlad)',
+      '2 salladslökar',
+      '2 msk sesamolja',
+      '2 msk sojasås',
+      '1 msk honung',
+      'Rostade sesamfrön',
+    ],
+    instructions: [
+      'Tillaga nudlarna enligt paketet. Skölj i kallt vatten.',
+      'Blanda sesamolja, soja och honung till en dressing.',
+      'Blanda nudlar, edamame, morot och salladslök i en stor skål.',
+      'Häll över dressingen och toppa med sesamfrön.',
+    ],
   },
   {
     id: '10',
@@ -138,8 +284,24 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '40 min',
-    description:
-      'Lite tålamod vid spisen och ett glas vin i handen, så har du snart världens godaste middag. Använd den svamp du gillar bäst – champinjoner funkar lika bra som skogens guld.',
+    comments:
+      'Lite tålamod vid spisen och ett glass vin i handen, så har du snart världens godaste middag. Använd den svamp du gillar bäst – champinjoner funkar lika bra som skogens guld.',
+    ingredients: [
+      '3 dl arborioris',
+      '250 g svamp (t.ex. skogschampinjoner)',
+      '1 schalottenlök',
+      '1 dl torrt vitt vin',
+      'ca 1 liter varm grönsaksbuljong',
+      '1 dl riven parmesan',
+      '50 g smör',
+    ],
+    instructions: [
+      'Stek svampen i torr panna tills vätskan försvunnit, tillsätt sedan lite smör.',
+      'Fräs finhackad lök och ris i smör tills riset är blankt.',
+      'Häll på vinet och låt koka in.',
+      'Tillsätt buljongen lite i taget och rör hela tiden. Låt sugas upp innan mer hälls på.',
+      'När riset är mjukt men har tuggmotstånd, rör ner svamp, parmesan och en klick smör.',
+    ],
   },
   {
     id: '11',
@@ -152,8 +314,23 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '25 min',
-    description:
+    comments:
       'Snabbt käk som alla gillar. Köp färdig falafel för att spara tid, men lägg krutet på den picklade löken och en god vitlökssås. Perfekt mat att äta framför en serie.',
+    ingredients: [
+      '1 paket falafel',
+      '4 stora tortillabröd eller libabröd',
+      '1 rödlök (picklad i 1-2-3 lag)',
+      'Blandad sallad',
+      '1 dl matlagningsyoghurt',
+      '1 vitlöksklyfta',
+      'Salt och peppar',
+    ],
+    instructions: [
+      'Värm falafeln enligt anvisningarna.',
+      'Blanda yoghurt med pressad vitlök, salt och peppar.',
+      'Värm bröden lätt.',
+      'Fyll bröden med sallad, falafel, picklad lök och vitlökssås. Rulla ihop.',
+    ],
   },
   {
     id: '12',
@@ -166,8 +343,24 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2',
     time: '55 min',
-    description:
+    comments:
       'När snön yr utanför är det här den ultimata tröstmaten. Löken får karamelliseras länge för maxad smak. Och ärligt talat – vem kan motstå gratinerad ost?',
+    ingredients: [
+      '500 g gul lök',
+      '25 g smör',
+      '1 msk mjöl',
+      '8 dl vatten + ox- eller grönsaksbuljong',
+      '1 dl vitt vin (valfritt)',
+      '4 skivor surdegsbröd',
+      '2 dl riven lagrad ost (t.ex. Gruyère)',
+    ],
+    instructions: [
+      'Skiva löken tunt och stek på låg värme i smör i minst 20 minuter tills den är brun och mjuk.',
+      'Pudra över mjöl och rör om. Häll på vin och buljong.',
+      'Låt sjuda i 20 minuter till.',
+      'Häll upp soppan i ugnssäkra skålar. Lägg på en brödskiva och massor av ost.',
+      'Gratinera högt upp i ugnen på 225°C tills osten fått färg.',
+    ],
   },
   {
     id: '13',
@@ -180,8 +373,23 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '15 min',
-    description:
+    comments:
       'En iskall soppa som smakar semester. Mixa ihop allt och låt stå i kylen ett tag så smakerna sätter sig ordentligt. En livräddare när termometern tickar uppåt.',
+    ingredients: [
+      '1 kg mogna tomater',
+      '1 gurka',
+      '1 röd paprika',
+      '1 vitlöksklyfta',
+      '2 msk rödvinsvinäger',
+      '1/2 dl olivolja',
+      'Salt och tabasco',
+    ],
+    instructions: [
+      'Grovhacka alla grönsaker.',
+      'Mixa grönsaker, vinäger och olja slätt i en blender.',
+      'Smaka av med salt och tabasco.',
+      'Sila soppan om du vill ha den helt slät. Låt stå i kylen minst 1 timme före servering.',
+    ],
   },
   {
     id: '14',
@@ -194,8 +402,34 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '40 min',
-    description:
+    comments:
       'Varmt, kryddigt och mjukt. Paneer-osten suger upp den krämiga såsen på ett fantastiskt sätt. Serveras bäst med ett fluffigt naanbröd och lite matlagningsyoghurt.',
+    ingredients: [
+      '4 port ris',
+      '2 gula lökar',
+      '3 vitlöksklyftor',
+      '50 g smör',
+      '2 msk riven färsk ingefära',
+      '1 tsk malen spiskummin',
+      '1 1/2 tsk garam masala',
+      '1 tsk chilipulver',
+      '1/2 tsk gurkmeja',
+      '1 förp krossade tomater (à 390 g)',
+      '1 dl hackade naturella cashewnötter',
+      '1 1/2 dl vatten',
+      '1 dl vispgrädde',
+      'salt',
+      '450 g paneer ost',
+      '2 msk rapsolja',
+    ],
+    instructions: [
+      'Koka riset enligt anvisningen på förpackningen.',
+      'Skala och hacka lök och vitlök. Smält smöret i en gryta. Fräs lök, vitlök och ingefära tills löken mjuknar. Rör ner kryddorna.',
+      'Tillsätt krossade tomater, cashewnötter och vatten. Koka 10 minuter.',
+      'Tillsätt grädde och mixa slätt med stavmixer. Smaka av med salt.',
+      'Skär osten i bitar och stek i oljan tills den får färg. Lägg ner i grytan och koka upp.',
+      'Servera med ris och koriander.',
+    ],
   },
   {
     id: '15',
@@ -208,8 +442,22 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '15 min',
-    description:
-      'Primörer, massa citronzest och en bra olivolja är allt som behövs. Går galet snabbt att kasta ihop efter en lång dag ute i solen. Får du inte tag i sparris går det bra att byta ut måt någon annan god grönsak.',
+    comments:
+      'Primörer, massa citronzest och en bra olivolja är allt som behövs. Går galet snabbt att kasta ihop efter en lång dag ute i solen.',
+    ingredients: [
+      '250 g pasta (t.ex. linguine)',
+      '1 knippe färsk sparris',
+      '1 citron (zest och saft)',
+      '1 dl riven parmesan',
+      '1/2 dl god olivolja',
+      'Flingsalt och svartpeppar',
+    ],
+    instructions: [
+      'Koka pastan. Skär sparrisen i bitar och låt den koka med de sista 2 minuterna.',
+      'Spara 1 dl av kokvattnet, häll av resten.',
+      'Blanda pastan med olivolja, citronzest, citronsaft och parmesan.',
+      'Tillsätt kokvatten efter behov för krämighet. Salta och peppra.',
+    ],
   },
   {
     id: '16',
@@ -222,8 +470,23 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '45 min',
-    description:
-      'En lite lyxigare vegoburgare. Jordigheten från rödbetorna och syran från chèvren är en oslagbar kombo. Gör gärna extra chèvrekräm – den går alltid åt!',
+    comments:
+      'En lite lyxigare vegoburgare. Jordigheten från rödbetorna och syran från chèvren är en oslagbar kombo.',
+    ingredients: [
+      '500 g råa rödbetor',
+      '2 dl havregryn',
+      '2 ägg',
+      '150 g chèvreost',
+      '1 dl crème fraiche',
+      '4 hamburgerbröd',
+      'Ruccola',
+    ],
+    instructions: [
+      'Riv rödbetorna fint. Blanda med ägg och havregryn. Låt svälla 10 minuter.',
+      'Mosa ihop chèvre och crème fraiche till en kräm.',
+      'Forma rödbetssmeten till biffar och stek ca 5 minuter per sida.',
+      'Servera i bröd med ruccola och chèvrekräm.',
+    ],
   },
   {
     id: '17',
@@ -236,8 +499,22 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '6',
     time: '45 min',
-    description:
-      'Lika mustig som en vanlig bolognese men gjord på små svarta linser. De håller formen bra och ger ett härligt tugg. Riktig life-saver som alltid går snabbt att göra och som faller ala i smaken.',
+    comments: 'Lika mustig som en vanlig bolognese men gjord på små svarta linser.',
+    ingredients: [
+      '2 dl belugalinser',
+      '1 gul lök',
+      '2 morötter (finrivna)',
+      '2 msk tomatpuré',
+      '2 burkar krossade tomater',
+      '3 dl vatten + buljongtärning',
+      'Spagetti',
+    ],
+    instructions: [
+      'Fräs hackad lök och rivna morötter.',
+      'Tillsätt tomatpuré, linser, krossade tomater och buljong.',
+      'Låt småkoka under lock i ca 25-30 minuter.',
+      'Servera med nykokt spagetti och gärna lite parmesan.',
+    ],
   },
   {
     id: '18',
@@ -250,8 +527,22 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2',
     time: '40 min',
-    description:
-      'Rulla dina egna favoriter! Ställ fram alla ingredienser på bordet och låt alla göra sina egna rullar. Superfräscht och perfekt för en varm kväll med vänner.',
+    comments:
+      'Rulla dina egna favoriter! Ställ fram alla ingredienser på bordet och låt alla göra sina egna rullar.',
+    ingredients: [
+      '1 paket rispapper',
+      '100 g glasnudlar',
+      '1 avokado',
+      '1 morot (julienne)',
+      'Färsk koriander och mynta',
+      'Dippsås: Hoisin, lime och jordnötter',
+    ],
+    instructions: [
+      'Tillaga nudlarna och skär grönsakerna i tunna stavar.',
+      'Doppa ett rispapper i ljummet vatten tills det mjuknar.',
+      'Lägg fyllning i mitten, vik in sidorna och rulla ihop tight.',
+      'Servera med dippsåsen.',
+    ],
   },
   {
     id: '19',
@@ -264,8 +555,21 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '4',
     time: '20 min',
-    description:
-      'En fransk klassiker som låter grönsakerna tala för sig själva. Servera med ungsrostad potatis eller bara ett riktigt gott bröd att suga upp den goda tomatsåsen med.',
+    comments: 'En fransk klassiker som låter grönsakerna tala för sig själva.',
+    ingredients: [
+      '1 aubergine',
+      '1 zucchini',
+      '2 röda paprikor',
+      '1 burk hela tomater',
+      'Herbes de Provence',
+      'Kokt potatis till servering',
+    ],
+    instructions: [
+      'Tärna alla grönsaker grovt.',
+      'Stek grönsakerna i omgångar i olivolja.',
+      'Blanda allt i en gryta med tomaterna och kryddor. Sjud i 15 minuter.',
+      'Serveras med potatis och bröd.',
+    ],
   },
   {
     id: '20',
@@ -278,7 +582,19 @@ export const mockRecipes: RecipeType[] = [
     },
     portions: '2-4',
     time: '40 min',
-    description:
-      'Blomkål kan vara lite tråkigt, men inte här! När den rostas i ugnen får den en nötig smak som passar perfekt med den krämiga tahinisåsen och lite granatäppelkärnor.',
+    comments: 'Blomkål kan vara lite tråkigt, men inte här! När den rostas i ugnen får den en nötig smak.',
+    ingredients: [
+      '1 stort blomkålshuvud',
+      '3 msk olivolja',
+      '1/2 dl tahini',
+      'Saft från 1/2 citron',
+      '1 tsk honung',
+      'Granatäppelkärnor',
+    ],
+    instructions: [
+      'Skär blomkålen i buketter. Blanda med olja och salt. Rosta i ugn på 225°C i 25 minuter.',
+      'Vispa ihop tahini, citron, honung och lite vatten till en rinnig sås.',
+      'Ringla såsen över den rostade blomkålen och toppa med granatäpple.',
+    ],
   },
 ];

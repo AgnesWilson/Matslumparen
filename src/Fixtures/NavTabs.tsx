@@ -54,11 +54,12 @@ export const NavTabs = () => {
   ];
 
   const currentTab = () => {
-    if (location.pathname.includes('slumparen')) return 0;
-    if (location.pathname.includes('dina-recept')) return 1;
-    if (location.pathname.includes('nytt-recept')) return 2;
-    if (location.pathname.includes('konto')) return 3;
-    return 0;
+    const path = location.pathname;
+    if (path.includes('slumparen')) return 0;
+    if (path.includes('dina-recept') || path.includes('recept/')) return 1;
+    if (path.includes('nytt-recept')) return 2;
+    if (path.includes('konto')) return 3;
+    return false;
   };
 
   const showLogout = isAuthenticated && location.pathname.startsWith('/konto');

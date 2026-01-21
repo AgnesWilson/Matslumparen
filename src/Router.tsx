@@ -8,6 +8,7 @@ import { CreateRecipe } from './Pages/ProtectedLayout/CreateRecipe';
 import { ProtectedLayout } from './Pages/ProtectedLayout/ProtectedLayout';
 import { YourAccount } from './Pages/ProtectedLayout/YourAccount';
 import { RandomizerResult } from './Pages/ProtectedLayout/RandomizerResult';
+import { SingleRecipe } from './Pages/ProtectedLayout/SingleRecipe';
 
 export const router = createBrowserRouter(
   [
@@ -34,6 +35,10 @@ export const router = createBrowserRouter(
             {
               path: 'dina-recept',
               element: <Recipes />,
+            },
+            {
+              path: 'recept/:id',
+              element: <SingleRecipe />,
             },
             {
               path: 'nytt-recept',
