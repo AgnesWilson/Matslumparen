@@ -1,14 +1,9 @@
 import { createBrowserRouter } from 'react-router';
 import { RootLayout } from './Pages/RootLayout/Layout';
+import { ProtectedLayout } from './Pages/ProtectedLayout/ProtectedLayout';
+
 import { PageNotFound } from './Pages/PageNotFound';
 import { Home } from './Pages/RootLayout/Home/Home';
-import { Randomizer } from './Pages/ProtectedLayout/Randomizer';
-import { Recipes } from './Pages/ProtectedLayout/Recipes';
-import { CreateRecipe } from './Pages/ProtectedLayout/CreateRecipe';
-import { ProtectedLayout } from './Pages/ProtectedLayout/ProtectedLayout';
-import { YourAccount } from './Pages/ProtectedLayout/YourAccount';
-import { RandomizerResult } from './Pages/ProtectedLayout/RandomizerResult';
-import { SingleRecipe } from './Pages/ProtectedLayout/SingleRecipe';
 
 export const router = createBrowserRouter(
   [
@@ -26,27 +21,45 @@ export const router = createBrowserRouter(
           children: [
             {
               path: 'slumparen',
-              element: <Randomizer />,
+              lazy: async () => {
+                const { Randomizer } = await import('./Pages/ProtectedLayout/Randomizer');
+                return { Component: Randomizer };
+              },
             },
             {
               path: 'resultat',
-              element: <RandomizerResult />,
+              lazy: async () => {
+                const { RandomizerResult } = await import('./Pages/ProtectedLayout/RandomizerResult');
+                return { Component: RandomizerResult };
+              },
             },
             {
               path: 'dina-recept',
-              element: <Recipes />,
+              lazy: async () => {
+                const { Recipes } = await import('./Pages/ProtectedLayout/Recipes');
+                return { Component: Recipes };
+              },
             },
             {
               path: 'recept/:id',
-              element: <SingleRecipe />,
+              lazy: async () => {
+                const { SingleRecipe } = await import('./Pages/ProtectedLayout/SingleRecipe');
+                return { Component: SingleRecipe };
+              },
             },
             {
               path: 'nytt-recept',
-              element: <CreateRecipe />,
+              lazy: async () => {
+                const { CreateRecipe } = await import('./Pages/ProtectedLayout/CreateRecipe');
+                return { Component: CreateRecipe };
+              },
             },
             {
               path: 'konto',
-              element: <YourAccount />,
+              lazy: async () => {
+                const { YourAccount } = await import('./Pages/ProtectedLayout/YourAccount');
+                return { Component: YourAccount };
+              },
             },
           ],
         },

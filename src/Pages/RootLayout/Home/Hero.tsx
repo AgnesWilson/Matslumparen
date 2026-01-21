@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import mainImage from '../../../assets/homePage.png';
+import mainImage from '../../../assets/homePage.webp';
 import cutlery from '../../../assets/cutlery.png';
 import { h2BoxStyles } from '../../../Styles/sharedStyles';
 
