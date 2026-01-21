@@ -26,9 +26,9 @@ export const PageNotFound = () => {
       >
         <FeedbackCard
           headline="Sidan hittades inte"
-          textOne="Sidan du försöker nå finns tyvärr inte. Gå tillbaka till startsidan och försök igen."
-          buttonText="Tillbaka till startsidan"
-          onButtonClick={() => navigate('/')}
+          textOne="Sidan du försöker nå finns tyvärr inte. Gå tillbaka till föregående sida."
+          buttonText="Tillbaka till föregående sida"
+          onButtonClick={() => navigate(-1)}
         />
       </Container>
     </Box>
