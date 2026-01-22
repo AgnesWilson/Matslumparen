@@ -15,4 +15,3 @@ TODO:
 
 - LinkBtn (Hur funkar det på Homepage)byter inte text på mobilversion. Endast desktop
 - Fixa routing för "skapa konto" knapp
-- Ta bort Vote och react loggor
