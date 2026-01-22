@@ -12,7 +12,6 @@ export const Home = () => {
 
   const infoRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -26,11 +25,13 @@ export const Home = () => {
           setActiveSection('hero');
         }
       },
-      { root: container, threshold: 0.1 }
+      {
+        root: window.innerWidth < 900 ? null : container,
+        threshold: 0.1,
+      }
     );
 
     observer.observe(infoRef.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -38,7 +39,11 @@ export const Home = () => {
     if (activeSection === 'hero') {
       infoRef.current?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.innerWidth < 900) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   };
 
@@ -46,24 +51,26 @@ export const Home = () => {
     <Box
       ref={containerRef}
       sx={{
-        height: '100vh',
-        overflowY: 'scroll',
+        height: { xs: 'auto', md: '100dvh' },
+        overflowY: { xs: 'visible', md: 'auto' },
         scrollSnapType: { xs: 'none', md: 'y mandatory' },
         scrollBehavior: 'smooth',
-        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
       }}
     >
-      <Box id="hero" ref={heroRef} sx={{ height: '100vh', scrollSnapAlign: { xs: 'none', md: 'start' } }}>
+      <Box id="hero" sx={{ height: '100dvh', flexShrink: 0, scrollSnapAlign: 'start' }}>
         <Hero />
       </Box>
 
-      <Box id="info" ref={infoRef} sx={{ minHeight: '100vh', scrollSnapAlign: { xs: 'none', md: 'start' } }}>
+      <Box id="info" ref={infoRef} sx={{ minHeight: '100dvh', flexShrink: 0, scrollSnapAlign: 'start' }}>
         <InfoSegment />
+      </Box>
+      <Box sx={{ scrollSnapAlign: 'end' }}>
+        <Footer onClick={() => setIsLoginOpen(true)} />
       </Box>
 
       <LinkButton activeSection={activeSection} onToggleScroll={handleScrollToggle} />
-
-      <Footer onClick={() => setIsLoginOpen(true)} />
       <LogInCard open={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </Box>
   );
