@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { LogInCard } from '../../../Components/Organisms/LogInCard';
-import { Footer } from '../../../Fixtures/Footer';
+import { LogInCard } from '../../Components/Organisms/LogInCard';
 import { Box } from '@mui/material';
-import { Hero } from './Hero';
-import { LinkButton } from './LinkButton';
-import { InfoSegment } from './InfoSegment';
+import { Hero } from '../../Components/Templates/Hero';
+import { LinkButton } from '../../Components/Atoms/LinkButton';
+import { InfoSegment } from '../../Components/Templates/InfoSegment';
+import { Footer } from '../../Components/Fixtures/Footer';
 
 export const Home = () => {
   const [activeSection, setActiveSection] = useState<'hero' | 'info'>('hero');
