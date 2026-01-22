@@ -1,6 +1,6 @@
 import { Box, Card, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
-import wobbles from '../../../assets/wobbles.png';
+import wobbles from '../../assets/wobbles.png';
 import type { RecipeType } from '../../Types/RecipeType';
 import { mockRecipe } from '../../MockData/SingleRecipe';
 import { h2BoxStyles } from '../../Styles/sharedStyles';
