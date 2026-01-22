@@ -1,55 +1,60 @@
 <!doctype html>
 <html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Luckiest+Guy&display=swap" rel="stylesheet" />
+    <title>Matslumparen – Vad ska vi äta idag?</title>
 
-  <title>Matslumparen – Vad ska vi äta idag?</title>
+    <!-- Meta Tags -->
+    <meta
+      name="description"
+      content="Har du beslutsångest inför middagen? Matslumparen hjälper dig att slumpa fram kvällens recept i ett nafs!"
+    />
+    <meta name="keywords" content="matslumparen, slumpa recept, middagstips, matplanering, receptgenerator" />
+    <link rel="canonical" href="https://agneswilson.github.io/Matslumparen/" />
 
-  <!-- Meta Tags -->
-  <meta name="description"
-    content="Har du beslutsångest inför middagen? Matslumparen hjälper dig att slumpa fram kvällens recept i ett nafs!" />
-  <meta name="keywords" content="matslumparen, slumpa recept, middagstips, matplanering, receptgenerator" />
-  <link rel="canonical" href="https://agneswilson.github.io/Matslumparen/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agneswilson.github.io/Matslumparen/" />
+    <meta property="og:title" content="Matslumparen – Sluta grubbla, börja laga!" />
+    <meta
+      property="og:description"
+      content="Få inspiration till middagen direkt. Matslumparen ger dig slumpmässiga recept baserade på nuvarande väder och säsong för att göra vardagen enklare."
+    />
+    <meta property="og:image" content="https://agneswilson.github.io/Matslumparen/og-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://agneswilson.github.io/Matslumparen/" />
+    <meta property="twitter:title" content="Matslumparen – Vad ska vi äta idag?" />
+    <meta property="twitter:description" content="Slumpa fram nästa måltid snabbt och enkelt." />
+    <meta property="twitter:image" content="https://agneswilson.github.io/Matslumparen/og-image.jpg" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://agneswilson.github.io/Matslumparen/" />
-  <meta property="og:title" content="Matslumparen – Sluta grubbla, börja laga!" />
-  <meta property="og:description"
-    content="Få inspiration till middagen direkt. Matslumparen ger dig slumpmässiga recept baserade på nuvarande väder och säsong för att göra vardagen enklare." />
-  <meta property="og:image" content="https://agneswilson.github.io/Matslumparen/og-image.png" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://agneswilson.github.io/Matslumparen/" />
-  <meta property="twitter:title" content="Matslumparen – Vad ska vi äta idag?" />
-  <meta property="twitter:description" content="Slumpa fram nästa måltid snabbt och enkelt." />
-  <meta property="twitter:image" content="https://agneswilson.github.io/Matslumparen/og-image.jpg" />
-
-  <!-- Structured Data (JSON-LD)-->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Matslumparen",
-      "url": "https://agneswilson.github.io/Matslumparen/",
-      "description": "Ett digitalt verktyg för att slumpa fram recept och middagsidéer för att underlätta matplanering.",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "All",
-      "author": {
-        "@type": "Person",
-        "name": "Agnes Wilson"
+    <!-- Structured Data (JSON-LD)-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Matslumparen",
+        "url": "https://agneswilson.github.io/Matslumparen/",
+        "description": "Ett digitalt verktyg för att slumpa fram recept och middagsidéer för att underlätta matplanering.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "All",
+        "author": {
+          "@type": "Person",
+          "name": "Agnes Wilson"
+        }
       }
-    }
-</script>
-</head>
+    </script>
+  </head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
