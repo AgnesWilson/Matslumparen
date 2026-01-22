@@ -2,11 +2,11 @@ import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { RecipeCard } from '../../Components/Organisms/RecipeCard';
 import { ReusableButton } from '../../Components/Atoms/ReusableButton';
 import { RecipeCardSmallBox } from '../../Components/Atoms/RecipeCardSmallBox';
-import { Footer } from '../../Fixtures/Footer';
 import { useAuth } from '../../Hooks/useAuth';
 import { theme } from '../../theme';
 import userImg from '../../assets/userImg.png';
 import { twoColumnPageStyle } from '../../Styles/sharedStyles';
+import { Footer } from '../../Components/Fixtures/Footer';
 
 export const YourAccount = () => {
   const { logout } = useAuth();

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router';
-import { HeaderLogo } from '../../Fixtures/HeaderLogo';
+import { HeaderLogo } from '../../Components/Fixtures/HeaderLogo';
 
 export const RootLayout = () => {
   return (
