@@ -19,7 +19,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link, useLocation } from 'react-router';
 import { ArrowBackRounded } from '@mui/icons-material';
-import { useAuth } from '../Hooks/useAuth';
+import { useAuth } from '../../Hooks/useAuth';
 
 const TabsStyles = {
   '& .MuiTabs-flexContainer': {

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import mainImage from '../../../assets/homePage.webp';
-import cutlery from '../../../assets/cutlery.png';
-import { h2BoxStyles } from '../../../Styles/sharedStyles';
+import mainImage from '../../assets/homePage.webp';
+import cutlery from '../../assets/cutlery.png';
+import { h2BoxStyles } from '../../Styles/sharedStyles';
 
 export const Hero = () => {
   return (

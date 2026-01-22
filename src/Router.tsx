@@ -3,7 +3,7 @@ import { RootLayout } from './Pages/RootLayout/Layout';
 import { ProtectedLayout } from './Pages/ProtectedLayout/ProtectedLayout';
 
 import { PageNotFound } from './Pages/PageNotFound';
-import { Home } from './Pages/RootLayout/Home/Home';
+import { Home } from './Pages/RootLayout/Home';
 
 export const router = createBrowserRouter(
   [

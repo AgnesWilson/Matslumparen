@@ -1,7 +1,7 @@
 import { Box, Container } from '@mui/material';
 import { FeedbackCard } from '../Components/Organisms/FeedbackCard';
 import { useNavigate } from 'react-router';
-import { HeaderLogo } from '../Fixtures/HeaderLogo';
+import { HeaderLogo } from '../Components/Fixtures/HeaderLogo';
 
 export const PageNotFound = () => {
   const navigate = useNavigate();

@@ -1,11 +1,11 @@
 import { Box, Card, Typography } from '@mui/material';
-import { h2BoxStyles } from '../../../Styles/sharedStyles';
-import wobbles from '../../../assets/wobbles.png';
-import { ReusableButton } from '../../../Components/Atoms/ReusableButton';
 import { useNavigate } from 'react-router';
-import { RecipeCard } from '../../../Components/Organisms/RecipeCard';
-import type { RecipeType } from '../../../Types/RecipeType';
-import { mockRecipe } from '../../../MockData/SingleRecipe';
+import wobbles from '../../assets/wobbles.png';
+import type { RecipeType } from '../../Types/RecipeType';
+import { mockRecipe } from '../../MockData/SingleRecipe';
+import { h2BoxStyles } from '../../Styles/sharedStyles';
+import { ReusableButton } from '../Atoms/ReusableButton';
+import { RecipeCard } from '../Organisms/RecipeCard';
 
 interface Props {
   recipe?: RecipeType;
