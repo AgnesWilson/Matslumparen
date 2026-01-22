@@ -15,6 +15,9 @@ export const Home = () => {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !infoRef.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -23,13 +26,10 @@ export const Home = () => {
           setActiveSection('hero');
         }
       },
-
-      { root: containerRef.current, threshold: 0.5 }
+      { root: container, threshold: 0.1 }
     );
 
-    if (infoRef.current) {
-      observer.observe(infoRef.current);
-    }
+    observer.observe(infoRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -48,16 +48,16 @@ export const Home = () => {
       sx={{
         height: '100vh',
         overflowY: 'scroll',
-        scrollSnapType: 'y mandatory',
+        scrollSnapType: { xs: 'none', md: 'y mandatory' },
         scrollBehavior: 'smooth',
         position: 'relative',
       }}
     >
-      <Box id="hero" ref={heroRef} sx={{ height: '100vh', scrollSnapAlign: 'start' }}>
+      <Box id="hero" ref={heroRef} sx={{ height: '100vh', scrollSnapAlign: { xs: 'none', md: 'start' } }}>
         <Hero />
       </Box>
 
-      <Box id="info" ref={infoRef} sx={{ minHeight: '100vh', scrollSnapAlign: 'start' }}>
+      <Box id="info" ref={infoRef} sx={{ minHeight: '100vh', scrollSnapAlign: { xs: 'none', md: 'start' } }}>
         <InfoSegment />
       </Box>
 
