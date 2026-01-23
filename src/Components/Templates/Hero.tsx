@@ -19,12 +19,12 @@ export const Hero = () => {
         src={mainImage}
         alt="Bild på en maträtt"
         sx={{
-          width: { xs: '140vw', sm: '130vw', md: '95vw', lg: '90vw' },
+          width: { xs: '160vw', sm: '130vw', md: '95vw', lg: '90vw' },
           height: 'auto',
           objectFit: 'cover',
           position: 'absolute',
-          top: { xs: '22vh', sm: '8vh', md: '5vh', lg: '2vh' },
-          left: { xs: '-20%', sm: '3%', md: '20%', lg: '25%' },
+          top: { xs: '23vh', sm: '8vh', md: '5vh', lg: '2vh' },
+          left: { xs: '-30%', sm: '3%', md: '20%', lg: '25%' },
           zIndex: -1,
           rotate: '4deg',
         }}

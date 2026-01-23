@@ -40,9 +40,7 @@ export const Recipes = () => {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box
-        sx={{ padding: '5%', paddingTop: { xs: '10%', sm: '6%', md: '4%', lg: '3%' }, paddingBottom: '3%' }}
-      >
+      <Box sx={{ padding: '5%', paddingTop: { xs: '3%', md: '4%', lg: '3%' }, paddingBottom: '3%' }}>
         <Stack direction="column" spacing={5}>
           <FilterGroup
             heading="Filtrera efter säsong"

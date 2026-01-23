@@ -47,7 +47,7 @@ export const RandomizerResult = () => {
     <Container
       maxWidth="lg"
       sx={{
-        paddingTop: { xs: '15%', sm: '5%', md: '6%' },
+        paddingTop: { xs: '5%', sm: '5%', md: '6%' },
         paddingBottom: { xs: '20%', md: '3%' },
       }}
     >
