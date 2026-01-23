@@ -21,7 +21,7 @@ export const SingleRecipe = () => {
   return (
     <Container
       sx={{
-        paddingTop: { xs: '10%', sm: '2%', md: '3%' },
+        paddingTop: { xs: '3%', sm: '2%', md: '3%' },
         paddingBottom: { xs: '20%', md: '3%' },
       }}
     >
