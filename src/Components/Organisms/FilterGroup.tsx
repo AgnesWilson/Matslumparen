@@ -17,8 +17,12 @@ export const FilterGroup = <T extends string>({
   onClose,
 }: Props<T>) => {
   return (
-    <Box sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
-      <Typography variant="body1" fontWeight="bold" sx={{ marginBottom: 1 }}>
+    <Box
+      component="section"
+      aria-labelledby={`filter-group-${heading}`}
+      sx={{ textAlign: { xs: 'center', sm: 'left' } }}
+    >
+      <Typography variant="body1" fontWeight="bold" id={`filter-group-${heading}`} sx={{ marginBottom: 1 }}>
         {heading}
       </Typography>
       <Stack
@@ -26,31 +30,38 @@ export const FilterGroup = <T extends string>({
         spacing={1}
         flexWrap="wrap"
         alignItems="center"
+        component="nav"
         sx={{ justifyContent: { xs: 'center', sm: 'flex-start' } }}
       >
-        {options.map((option, index) => (
-          <Box key={option} sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography
-              variant="h6"
-              onClick={() => onSelect(option)}
-              sx={{
-                cursor: 'pointer',
-                padding: '2px 6px',
-                border: selectedValue === option ? '2px solid black' : '1px solid transparent',
-                fontWeight: selectedValue === option ? 'bold' : 'normal',
-                '&:hover': { opacity: 0.7 },
-              }}
-            >
-              {option}
-            </Typography>
+        {options.map((option, index) => {
+          const isSelected = selectedValue === option;
+          return (
+            <Box key={option} sx={{ display: 'flex', alignItems: 'center' }}>
+              <Button
+                variant="text"
+                onClick={() => onSelect(option)}
+                aria-pressed={isSelected}
+                sx={{
+                  textTransform: 'none',
+                  minWidth: 'auto',
+                  padding: '2px 8px',
+                  color: 'black',
+                  fontWeight: isSelected ? 'bold' : 'normal',
+                  border: isSelected ? '2px solid black' : '1px solid transparent',
+                  '&:hover': { backgroundColor: 'rgba(0,0,0,0.04)' },
+                }}
+              >
+                {option}
+              </Button>
 
-            {index < options.length - 1 && (
-              <Typography variant="h6" sx={{ marginLeft: 1, cursor: 'default' }}>
-                |
-              </Typography>
-            )}
-          </Box>
-        ))}
+              {index < options.length - 1 && (
+                <Typography aria-hidden="true" sx={{ marginLeft: 1, cursor: 'default' }}>
+                  |
+                </Typography>
+              )}
+            </Box>
+          );
+        })}
 
         {selectedValue !== 'Alla' && (
           <Button
