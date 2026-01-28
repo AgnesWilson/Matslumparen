@@ -19,8 +19,6 @@ import { ErrorMessage } from '../Atoms/ErrorMessage';
 import { ReusableButton } from '../Atoms/ReusableButton';
 import { useAuth } from '../../Hooks/useAuth';
 
-// TODO: Add icons to error messages !!
-
 interface Props {
   open: boolean;
   onClose: () => void;
