@@ -9,7 +9,7 @@ export const HeaderLogo = () => {
         fontSize: 'clamp(2rem, 13.5vw, 15rem)',
         textAlign: 'center',
         color: 'tertiary.main',
-        WebkitTextStroke: '3px #000',
+        WebkitTextStroke: '0.02em #000',
       }}
     >
       Matslumparen
