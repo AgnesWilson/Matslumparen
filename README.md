@@ -8,7 +8,7 @@ The project was developed as a degree project at **Medieinstitutet**.
 
 [Link to Live Demo](https://agneswilson.github.io/Matslumparen/)
 
-![Gif demo](src/assets/gifDemo.gif)
+![Gif demo](src/assets/demoGif.gif)
 
 ---
 
