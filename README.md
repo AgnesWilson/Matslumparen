@@ -8,15 +8,17 @@ The project was developed as a degree project at **Medieinstitutet**.
 
 [Link to Live Demo](https://agneswilson.github.io/Matslumparen/)
 
+![Gif demo](src/assets/gifDemo.gif)
+
 ---
 
 ## Concept & Purpose
 
 Matslumparen is built on two core principles:
 
-1. **Personal recipe ownership** The application does not provide recipes of its own. Instead, users collect, manage, and reuse their own recipes in one centralized place.
+1. **Personal recipe ownership** – The application does not provide recipes of its own. Instead, users collect, manage, and reuse their own recipes in one centralized place.
 
-2. **Simplifying decision making** by generating a recipe based on contextual factors like the current season and weather, the application maximizes the chances of suggesting something the user actually wants to eat.
+2. **Simplifying decision making** – By generating a recipe based on contextual factors like the current season and weather, the application maximizes the chances of suggesting something the user actually wants to eat.
 
 The goal is not inspiration through abundance, but **clarity through reduction**: one suggestion at a time, based on what the user already likes.
 
@@ -24,18 +26,12 @@ The goal is not inspiration through abundance, but **clarity through reduction**
 
 ## Core Features
 
-- **Landing / Home**
-  Concept introduction and login entry points.
-
-- **Recipe Randomization (Slumparen)** Generates a single recipe suggestion from the user’s collection, filtered by current season and weather conditions.
-
-- **Seasonality and Weather-Based Structure** Recipes are categorized using user-defined labels rather than fixed, external logic. This reinforces the "user-first" approach; one user might feel that pizza is only suitable for summer, while another feels the opposite. By allowing the user to define these parameters, the app maximizes user satisfaction.
-
-- **Weather Integration** Current weather data is fetched from an external API and mapped into simplified states (e.g., temperature thresholds or conditions like rainy, sunny, or cloudy).
-
-- **Recipe Management** The interface supports viewing the entire collection and individual recipe details. In this prototype, a set of recipes is provided to demonstrate the logic. The user can, when viewing the entire recipe collection, filter recipes based on weather conditions and seasons.
-
-- **Mock Authentication** A hard-coded user account simulates the logged-in experience and personalized data flow.
+- **Landing / Home** – Concept introduction and login entry points.
+- **Recipe Randomization (Slumparen)** – Generates a single recipe suggestion from the user’s collection, filtered by current season and weather conditions.
+- **Seasonality and Weather-Based Structure** – Recipes are categorized using user-defined labels rather than fixed, external logic. This reinforces the "user-first" approach; the user decides when a recipe is appropriate.
+- **Weather Integration** – Current weather data is fetched from an external API and mapped into simplified states (e.g., temperature thresholds or conditions like rainy, sunny, or cloudy).
+- **Recipe Management** – Interface for viewing the entire collection and individual details. Users can filter the collection based on weather conditions and seasons.
+- **Mock Authentication** – A hard-coded user account simulates the logged-in experience and personalized data flow.
 
 ---
 
@@ -49,8 +45,6 @@ The goal is not inspiration through abundance, but **clarity through reduction**
 
 ---
 
----
-
 ## Getting Started & Development
 
 To run this project locally and maintain code quality, follow these steps:
@@ -59,7 +53,7 @@ To run this project locally and maintain code quality, follow these steps:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/agneswilson/Matslumparen.git](https://github.com/agneswilson/Matslumparen.git)
+git clone https://github.com/AgnesWilson/Matslumparen.git
 
 # Install dependencies
 pnpm install
@@ -71,12 +65,10 @@ pnpm dev
 
 ### 2. Code Quality Tools
 
-The project uses **ESLint**, **Prettier**, and **TypeScript** to ensure consistency and code quality:
+The project uses **ESLint**, **Prettier**, and **TypeScript** to ensure consistency:
 
-- **Linting:**
-  - `pnpm lint` (Check for code errors)
-- **Type Checking:**
-  - `pnpm typecheck` (Verify TypeScript logic)
+- **Linting:** `pnpm lint` (Check for code errors)
+- **Type Checking:** `pnpm typecheck` (Verify TypeScript logic)
 - **Formatting:**
   - `npx prettier . --check` (Check if files follow the style guide)
   - `npx prettier . --write` (Automatically fix formatting issues)
@@ -87,52 +79,50 @@ The project uses **ESLint**, **Prettier**, and **TypeScript** to ensure consiste
 
 ### Login Credentials
 
-To explore the personalized features in the prototype, use the following mock account:
-(This information is also shown in the UI under the (i) - symbol tooltip.)
+To explore the personalized features, use the following mock account (also found via the **(i)** tooltip in the UI):
 
-- **Username:** `Johannes`
-- **Password:** `Jojo`
+| Role      | Username | Password |
+| :-------- | :------- | :------- |
+| Mock User | Johannes | Jojo     |
 
 ### Weather Data Toggle
 
-The application can use stable dummy data for development purpuses. To enable dummy data instead of live fetching:
+The app can use stable dummy data for development purposes. To toggle this:
 
 1. Open `src/services/weatherService.ts`.
-2. Locate the line: `const USE_DUMMY_DATA = false;`
-3. Change the value to: `true`.
+2. Locate: `const USE_DUMMY_DATA = false;`
+3. Change to `true` to enable dummy data (or `false` for live data).
+
+---
 
 ## Design Goals
 
-The project was guided by the following design goals:
-
-- Reduce cognitive load rather than provide endless inspiration.
-- Build entirely on the user’s own recipes.
-- Provide one clear suggestion at a time.
-- Make seasonality and weather appropriateness for a recipe a personal, user-defined concept.
-- Keep navigation shallow and predictable.
-- Support quick, low-effort interactions.
+- **Reduce cognitive load** rather than provide endless inspiration.
+- **Build entirely** on the user’s own recipes.
+- **Provide one clear suggestion** at a time.
+- **Personalized seasonality:** Make weather appropriateness a user-defined concept.
+- **Maintain shallow navigation:** Keep the structure simple and predictable.
+- **Low-effort interactions:** Support quick decision-making.
 
 ---
 
 ## Accessibility
 
-Accessibility has been a priority from the initial design phase:
-
-- **Semantic HTML** structure for screen reader support.
-- **Full keyboard navigation** for all core functionality.
-- **Logical focus order** and clearly visible focus states.
-- **Consistent navigation** across all views.
-- **Color contrast testing** to ensure readability without relying solely on color cues.
+- **Semantic HTML:** Structure optimized for screen reader support.
+- **Keyboard Navigation:** Full support for all core functionality.
+- **Focus Management:** Logical focus order and clearly visible focus states.
+- **Consistent UI:** Predictable navigation across all views.
+- **Color Contrast:** Tested to ensure high readability and accessibility.
 
 ---
 
 ## Testing
 
-The project utilized **iterative user testing** across three primary stages to ensure a user-centric final product:
+The project utilized **iterative user testing** across three primary stages:
 
 - **Wireframe testing:** Validating the core concept and navigational clarity.
 - **Functional prototype testing:** Identifying and resolving usability issues in the early build.
-- **Final prototype testing:** Ensuring a cohesive flow and an intuitive overall experience.
+- **Final prototype testing:** Ensuring a cohesive flow and an intuitive experience.
 
 ---
 
@@ -145,9 +135,9 @@ The project utilized **iterative user testing** across three primary stages to e
 
 ### Future Roadmap
 
-- **Backend Integration:** Implementing a full database to support user accounts and complete CRUD (Create, Read, Update, Delete) functionality for recipes and users.
+- **Backend Integration:** Database support for user accounts and full CRUD functionality.
 - **Dynamic Weather:** Location-based weather fetching via GPS or manual search.
-- **Recipe Input:** Adding methods for recipe import via URLs, image uploads, or manual user input.
+- **Smart Recipe Input:** Importing recipes via URLs, image uploads, or manual input.
 
 ---
 
@@ -156,10 +146,14 @@ The project utilized **iterative user testing** across three primary stages to e
 - **Live Demo:** [https://agneswilson.github.io/Matslumparen/](https://agneswilson.github.io/Matslumparen/)
 - **Wireframes (Figma):** [Link to Figma Design](https://www.figma.com/design/dLATPW2Ci0ceR6BicNtzLu/Slutprojekt-planeringsapp?node-id=1-2&p=f)
 
+- **Full project report (PDF):** [Project report (PDF)](docs/MatslumparenReport.pdf)
+
 ---
 
 ## Author
 
 Agnes Wilson
+
 Degree Project – Fed24D
+
 Medieinstitutet
